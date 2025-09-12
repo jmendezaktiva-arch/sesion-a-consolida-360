@@ -1,0 +1,76 @@
+/* 🎨 style.css */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  margin: 0;
+  padding: 2rem;
+}
+
+#presentation-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Estilo base para todas las diapositivas */
+.slide {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 40px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #005a9c; /* Un toque de color como en la PPT */
+}
+
+/* Estilos específicos para cada tipo de diapositiva */
+.slide.title-slide {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+}
+
+.slide h1 {
+  margin-top: 0;
+  font-size: 2.5em;
+  color: #003366;
+}
+
+.slide.title-slide h1 {
+  color: white;
+}
+
+.slide h2 {
+  font-size: 1.2em;
+  color: #005a9c;
+  font-weight: 600;
+  border-bottom: 2px solid #e1e1e1;
+  padding-bottom: 10px;
+}
+
+.slide p, .slide li {
+  line-height: 1.6;
+}
+
+.slide ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.slide ul li {
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+  margin-bottom: 10px;
+}
+
+.slide ul li::before {
+  content: '✓'; /* Viñeta personalizada */
+  color: #005a9c;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.slide img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-top: 15px;
+}
