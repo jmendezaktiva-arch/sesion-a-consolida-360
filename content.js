@@ -7,7 +7,7 @@ const slideContent = [
     layout: 'layout-center-focus',
     title: '¡Bienvenidos a Consolidación 360°!', 
     subtitle: 'EMPRESA EXITOSA: DE TAREAS A RESULTADOS', 
-    content:'<div style="margin-bottom: 50px;"><h3>Transformando PYMES en Empresas Exitosas y Sostenibles</h3><ul style="list-style: none; padding-left: 0; text-align: center;"></p></div>', 
+    content:'<div style="margin-bottom: 20px;"><h3>Transformando PYMES en Empresas Exitosas y Sostenibles</h3><ul style="list-style: none; padding-left: 0; text-align: center;"></p></div>', 
     image: 'assets/images/slide-1.png',// La imagen se colocará centrada debajo del subtitulo.
     background: '#FFFFFF' 
   },
