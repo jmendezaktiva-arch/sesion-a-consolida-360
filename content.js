@@ -5,8 +5,8 @@ const slideContent = [
   // Diapositiva 1: Portada
   {
     layout: 'layout-center-focus',
-    [cite_start]title: 'EMPRESA EXITOSA: DE TAREAS A RESULTADOS', // [cite: 3]
-    [cite_start]subtitle: 'Transformando PYMES en Empresas Exitosas y Sostenibles', // [cite: 5]
+    title: 'EMPRESA EXITOSA: DE TAREAS A RESULTADOS', // [cite: 3]
+    subtitle: 'Transformando PYMES en Empresas Exitosas y Sostenibles', // [cite: 5]
     image: 'assets/images/portada-sesion-a.jpg', // REEMPLAZA ESTA IMAGEN
     background: '#FFFFFF' 
   },
@@ -14,7 +14,7 @@ const slideContent = [
   // Diapositiva 2: Nuestra Misión
   {
     layout: 'layout-split',
-    [cite_start]title: 'NUESTRA MISIÓN: TU TRANSFORMACIÓN', // [cite: 25]
+    title: 'NUESTRA MISIÓN: TU TRANSFORMACIÓN', // [cite: 25]
     content: `
       [cite_start]<p>Mi Empresa Crece es tu socio estratégico para la consolidación de tu negocio. [cite: 4]</p>
       <h3 style="margin-top: 40px; font-style: italic; border-left: 4px solid var(--accent-color); padding-left: 15px;">
@@ -27,7 +27,7 @@ const slideContent = [
   // Diapositiva 3: La Hoja de Ruta
   {
     layout: 'layout-infographic',
-    [cite_start]title: 'LA HOJA DE RUTA HACIA LA CONSOLIDACIÓN', // [cite: 146]
+    title: 'LA HOJA DE RUTA HACIA LA CONSOLIDACIÓN', // [cite: 146]
     content: `
       <div class="icon-grid">
         <div class="icon-item">
@@ -62,7 +62,7 @@ const slideContent = [
   // Diapositiva 5: Reglas del Juego
   {
     layout: 'layout-default slide-5-custom',
-    [cite_start]title: 'REGLAS DEL JUEGO Y DINÁMICA', // [cite: 27]
+    title: 'REGLAS DEL JUEGO Y DINÁMICA', // [cite: 27]
     content: `
       <p style="text-align: center;">Establecemos un marco de compromiso para construir juntos.</p>
       <ul class="infographic-list">
@@ -77,7 +77,7 @@ const slideContent = [
   // Diapositiva 6: Objetivos de Transformación
   {
     layout: 'layout-split',
-    [cite_start]title: 'OBJETIVOS DE TRANSFORMACIÓN', // [cite: 38]
+    title: 'OBJETIVOS DE TRANSFORMACIÓN', // [cite: 38]
     content: `
       [cite_start]<p>Estrategias para Fortalecer la Responsabilidad, la Delegación y la Retroalimentación en tu equipo. [cite: 39]</p>
       <ul>
@@ -95,22 +95,22 @@ const slideContent = [
   // Diapositiva 7: Conceptos Clave
   {
     layout: 'layout-center-focus',
-    [cite_start]title: 'CONCEPTO CLAVE DEL PROGRAMA', // [cite: 52]
+    title: 'CONCEPTO CLAVE DEL PROGRAMA', // [cite: 52]
     image: 'assets/images/conceptos-clave-sesion-a.png', // REEMPLAZA ESTA IMAGEN
-    [cite_start]content: 'Gestión efectiva del personal, Ownership, Tramo de control, Delegación, Feedback 360 y más. [cite: 53, 54, 55, 57, 59]'
+    content: 'Gestión efectiva del personal, Ownership, Tramo de control, Delegación, Feedback 360 y más. [cite: 53, 54, 55, 57, 59]'
   },
 
   // Diapositiva 8: Elementos Clave (Ruta de Implementación)
   {
     layout: 'layout-center-focus',
-    [cite_start]title: 'ELEMENTOS CLAVE DEL PROGRAMA', // [cite: 61]
+    title: 'ELEMENTOS CLAVE DEL PROGRAMA', // [cite: 61]
     image: 'assets/images/ruta-implementacion-sesion-a.png' // REEMPLAZA ESTA IMAGEN
   },
 
   // --- SERIE DE EJERCICIOS ---
   {
     layout: 'layout-split',
-    [cite_start]title: "EJERCICIO 1: 'DEPENDENCIA OPERATIVA DEL LÍDER'", // [cite: 65]
+    title: "EJERCICIO 1: 'DEPENDENCIA OPERATIVA DEL LÍDER'", // [cite: 65]
     content: `
       <h3>Objetivo:</h3>
       [cite_start]<p>Identificar la dependencia del equipo en el líder para decisiones y procesos clave. [cite: 64]</p>
@@ -125,7 +125,7 @@ const slideContent = [
   },
   {
     layout: 'layout-split',
-    [cite_start]title: "EJERCICIO 2: 'VOCACIÓN DE PUESTOS CLAVE'", // [cite: 77]
+    title: "EJERCICIO 2: 'VOCACIÓN DE PUESTOS CLAVE'", // [cite: 77]
     content: `
       <h3>Objetivo:</h3>
       [cite_start]<p>Identificar la brecha entre el desempeño actual y el impacto estratégico esperado del puesto. [cite: 73]</p>
@@ -139,7 +139,7 @@ const slideContent = [
   },
   {
     layout: 'layout-split',
-    [cite_start]title: "EJERCICIO 4: 'LA MISIÓN DEL ROL'", // [cite: 93]
+    title: "EJERCICIO 4: 'LA MISIÓN DEL ROL'", // [cite: 93]
     content: `
       <h3>Objetivo:</h3>
       [cite_start]<p>Documentar una definición de puesto clave que sea clara, potente e inspiradora. [cite: 88]</p>
@@ -157,7 +157,7 @@ const slideContent = [
   // Diapositiva de Cierre: Reflexión
   {
     layout: 'layout-center-focus',
-    [cite_start]title: 'REFLEXIÓN', // [cite: 127]
+    title: 'REFLEXIÓN', // [cite: 127]
     content: `
       <blockquote style="font-size: 1.5em; text-align: center; max-width: 80%; margin: 40px auto;">
         [cite_start]"Cuando el equipo entiende lo que hay que lograr, el crecimiento empieza a depender de cuánto Propósito encuentra el equipo en lo que hacen." [cite: 128]
