@@ -28,11 +28,11 @@ const slideContent = [
     layout: 'layout-infographic',
     title: 'Tu Programa de Transformación',
     content: `<div class="icon-grid">
-                <div class="icon-item"><i class="fas fa-users"></i><p>Equipo</p></div>
+                <div class="icon-item"><i class="fas fa-users-highlight"></i><p><strong>Equipo</strong></p></div>
                 <div class="connector">&rarr;</div>
                 <div class="icon-item"><i class="fas fa-chart-line"></i><p>Ventas</p></div>
                 <div class="connector">&rarr;</div>
-                <div class="icon-item"><i class="fas fa-coins icon-highlight"></i><p><strong>Inversión</strong></p></div>
+                <div class="icon-item"><i class="fas fa-coins icon"></i><p>Inversión</p></div>
               </div>`
   },
 
