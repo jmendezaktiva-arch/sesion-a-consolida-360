@@ -5,8 +5,8 @@ const slideContent = [
   // Diapositiva 1: Portada
   {
     layout: 'layout-center-focus',
-    title: '¡Bienvenidos a Consolidación 360°!, 
-    subtitle: 'EMPRESA EXITOSA: DE TAREAS A RESULTADOS 
+    title: '¡Bienvenidos a Consolidación 360°!', 
+    subtitle: 'EMPRESA EXITOSA: DE TAREAS A RESULTADOS', 
     content:'Transformando PYMES en Empresas Exitosas y Sostenibles', 
     image: 'assets/images/slide-1.png',
     background: '#FFFFFF' 
@@ -15,7 +15,7 @@ const slideContent = [
   // Diapositiva 2: Nuestra Misión
   {
     layout: 'layout-split',
-    title: 'Mi Empresa Crece: Nuestra Esencia'
+    title: 'Mi Empresa Crece: Nuestra Esencia',
     subtitle:'NUESTRA MISIÓN: TU TRANSFORMACIÓN', 
     content: `
     <p style="text-align: center; max-width: 80%; margin: 0 auto 30px auto;">
@@ -85,6 +85,32 @@ const slideContent = [
     image: 'assets/images/slide-8.0.png' // REEMPLAZA ESTA IMAGEN
   },
 
+ 
+   // Diapositiva 9: La Hoja de Ruta
+  {
+    layout: 'layout-infographic',
+    title: 'LA HOJA DE RUTA HACIA LA CONSOLIDACIÓN', 
+    content: `
+      <div class="icon-grid">
+        <div class="icon-item">
+          <i class="fas fa-users" style="color: var(--accent-color);"></i>
+          <p><strong>(A) Equipos con Ownership</strong></p>  
+        </div>
+        <div class="connector">&rarr;</div>
+        <div class="icon-item">
+          <i class="fas fa-chart-line"></i>
+          <p>(B) Ecosistema Digital</p>  
+        </div>
+        <div class="connector">&rarr;</div>
+        <div class="icon-item">
+          <i class="fas fa-coins"></i>
+          <p>(C) Inversiones Inteligentes</p> 
+        </div>
+      </div>
+    `,
+    image: 'assets/images/slide-3.png',
+  },
+ 
   // --- SERIE DE EJERCICIOS ---
   {
     layout: 'layout-split',
@@ -162,27 +188,3 @@ const slideContent = [
 
 
 
-  // Diapositiva x: La Hoja de Ruta
-  {
-    layout: 'layout-infographic',
-    title: 'LA HOJA DE RUTA HACIA LA CONSOLIDACIÓN', 
-    content: `
-      <div class="icon-grid">
-        <div class="icon-item">
-          <i class="fas fa-users" style="color: var(--accent-color);"></i>
-          <p><strong>(A) Equipos con Ownership</strong></p>  
-        </div>
-        <div class="connector">&rarr;</div>
-        <div class="icon-item">
-          <i class="fas fa-chart-line"></i>
-          <p>(B) Ecosistema Digital</p>  
-        </div>
-        <div class="connector">&rarr;</div>
-        <div class="icon-item">
-          <i class="fas fa-coins"></i>
-          <p>(C) Inversiones Inteligentes</p> 
-        </div>
-      </div>
-    `,
-    image: 'assets/images/slide-3.png',
-  },
