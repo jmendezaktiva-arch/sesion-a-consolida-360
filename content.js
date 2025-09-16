@@ -16,9 +16,9 @@ const slideContent = [
     layout: 'layout-split',
     title: 'NUESTRA MISIÓN: TU TRANSFORMACIÓN', // [cite: 25]
     content: `
-      [cite_start]<p>Mi Empresa Crece es tu socio estratégico para la consolidación de tu negocio. [cite: 4]</p>
+      <p>Mi Empresa Crece es tu socio estratégico para la consolidación de tu negocio. </p>
       <h3 style="margin-top: 40px; font-style: italic; border-left: 4px solid var(--accent-color); padding-left: 15px;">
-        [cite_start]"No hay transformación empresarial sin transformación personal." [cite: 26]
+        "No hay transformación empresarial sin transformación personal." 
       </h3>
     `,
     image: 'assets/images/mision-sesion-a.jpg' // REEMPLAZA ESTA IMAGEN
@@ -66,10 +66,10 @@ const slideContent = [
     content: `
       <p style="text-align: center;">Establecemos un marco de compromiso para construir juntos.</p>
       <ul class="infographic-list">
-        [cite_start]<li><i class="fas fa-video"></i> <div><strong>Cámara encendida para conectar</strong><br>Es un taller de consultoría aplicada. [cite: 29]</div></li>
-        [cite_start]<li><i class="fas fa-comments"></i> <div><strong>Participación activa para el mayor beneficio</strong><br>Tu involucramiento es clave. [cite: 30]</div></li>
-        [cite_start]<li><i class="fas fa-laptop"></i> <div><strong>Mentalidad de implementación</strong><br>Indispensable acceder desde PC, Laptop o Tablet. [cite: 31]</div></li>
-        [cite_start]<li><i class="fas fa-hand-paper"></i> <div><strong>Levanta la mano para participar</strong><br>Usa el indicador para pedir la palabra. [cite: 35]</div></li>
+        <li><i class="fas fa-video"></i> <div><strong>Cámara encendida para conectar</strong><br>Es un taller de consultoría aplicada. </div></li>
+        <li><i class="fas fa-comments"></i> <div><strong>Participación activa para el mayor beneficio</strong><br>Tu involucramiento es clave. </div></li>
+        <li><i class="fas fa-laptop"></i> <div><strong>Mentalidad de implementación</strong><br>Indispensable acceder desde PC, Laptop o Tablet. </div></li>
+        <li><i class="fas fa-hand-paper"></i> <div><strong>Levanta la mano para participar</strong><br>Usa el indicador para pedir la palabra. </div></li>
       </ul>
     `
   },
@@ -79,14 +79,14 @@ const slideContent = [
     layout: 'layout-split',
     title: 'OBJETIVOS DE TRANSFORMACIÓN', // [cite: 38]
     content: `
-      [cite_start]<p>Estrategias para Fortalecer la Responsabilidad, la Delegación y la Retroalimentación en tu equipo. [cite: 39]</p>
+      <p>Estrategias para Fortalecer la Responsabilidad, la Delegación y la Retroalimentación en tu equipo. </p>
       <ul>
-        [cite_start]<li>Diagnosticar el nivel de 'ownership'. [cite: 40]</li>
-        [cite_start]<li>Conectar cada rol con el propósito estratégico. [cite: 41]</li>
-        [cite_start]<li>Rediseñar el tramo de control. [cite: 42]</li>
-        [cite_start]<li>Aplicar un método de delegación efectiva. [cite: 43]</li>
-        [cite_start]<li>Implementar el modelo de semáforo para medir progreso. [cite: 44]</li>
-        [cite_start]<li>Usar Feedback 360° para consolidar personal clave. [cite: 45]</li>
+        <li>Diagnosticar el nivel de 'ownership'. </li>
+        <li>Conectar cada rol con el propósito estratégico. </li>
+        <li>Rediseñar el tramo de control. </li>
+        <li>Aplicar un método de delegación efectiva. </li>
+        <li>Implementar el modelo de semáforo para medir progreso. </li>
+        <li>Usar Feedback 360° para consolidar personal clave. </li>
       </ul>
     `,
     image: 'assets/images/objetivos-sesion-a.jpg' // REEMPLAZA ESTA IMAGEN
@@ -97,7 +97,7 @@ const slideContent = [
     layout: 'layout-center-focus',
     title: 'CONCEPTO CLAVE DEL PROGRAMA', // [cite: 52]
     image: 'assets/images/conceptos-clave-sesion-a.png', // REEMPLAZA ESTA IMAGEN
-    content: 'Gestión efectiva del personal, Ownership, Tramo de control, Delegación, Feedback 360 y más. [cite: 53, 54, 55, 57, 59]'
+    content: 'Gestión efectiva del personal, Ownership, Tramo de control, Delegación, Feedback 360 y más.'
   },
 
   // Diapositiva 8: Elementos Clave (Ruta de Implementación)
@@ -113,12 +113,12 @@ const slideContent = [
     title: "EJERCICIO 1: 'DEPENDENCIA OPERATIVA DEL LÍDER'", // [cite: 65]
     content: `
       <h3>Objetivo:</h3>
-      [cite_start]<p>Identificar la dependencia del equipo en el líder para decisiones y procesos clave. [cite: 64]</p>
+      <p>Identificar la dependencia del equipo en el líder para decisiones y procesos clave. </p>
       <h3>Consideraciones:</h3>
       <ul>
-        [cite_start]<li>Sé honesto, es para tu beneficio. [cite: 68]</li>
-        [cite_start]<li>Analiza patrones en la operación diaria. [cite: 69]</li>
-        [cite_start]<li>Conecta cada respuesta con el impacto en resultados. [cite: 70]</li>
+        <li>Sé honesto, es para tu beneficio. </li>
+        <li>Analiza patrones en la operación diaria. </li>
+        <li>Conecta cada respuesta con el impacto en resultados. </li>
       </ul>
     `,
     image: 'assets/images/ejercicio-1.jpg' // REEMPLAZA ESTA IMAGEN
@@ -128,11 +128,11 @@ const slideContent = [
     title: "EJERCICIO 2: 'VOCACIÓN DE PUESTOS CLAVE'", // [cite: 77]
     content: `
       <h3>Objetivo:</h3>
-      [cite_start]<p>Identificar la brecha entre el desempeño actual y el impacto estratégico esperado del puesto. [cite: 73]</p>
+      <p>Identificar la brecha entre el desempeño actual y el impacto estratégico esperado del puesto. </p>
       <h3>Consideraciones:</h3>
       <ul>
-        [cite_start]<li>Evalúa desde la perspectiva de resultados, no solo tareas. [cite: 75]</li>
-        [cite_start]<li>Detecta el nivel de propiedad del puesto sobre los resultados. [cite: 76]</li>
+        <li>Evalúa desde la perspectiva de resultados, no solo tareas. </li>
+        <li>Detecta el nivel de propiedad del puesto sobre los resultados. </li>
       </ul>
     `,
     image: 'assets/images/ejercicio-2.jpg' // REEMPLAZA ESTA IMAGEN
@@ -142,12 +142,12 @@ const slideContent = [
     title: "EJERCICIO 4: 'LA MISIÓN DEL ROL'", // [cite: 93]
     content: `
       <h3>Objetivo:</h3>
-      [cite_start]<p>Documentar una definición de puesto clave que sea clara, potente e inspiradora. [cite: 88]</p>
+      <p>Documentar una definición de puesto clave que sea clara, potente e inspiradora. </p>
       <h3>Consideraciones:</h3>
       <ul>
-        [cite_start]<li>Define la misión desde el impacto estratégico. [cite: 90]</li>
-        [cite_start]<li>Alinea responsabilidades con objetivos medibles. [cite: 91]</li>
-        [cite_start]<li>Incluye el propósito para inspirar ownership. [cite: 92]</li>
+        <li>Define la misión desde el impacto estratégico. </li>
+        <li>Alinea responsabilidades con objetivos medibles. </li>
+        <li>Incluye el propósito para inspirar ownership. </li>
       </ul>
     `,
     image: 'assets/images/ejercicio-4.jpg' // REEMPLAZA ESTA IMAGEN
@@ -160,7 +160,7 @@ const slideContent = [
     title: 'REFLEXIÓN', // [cite: 127]
     content: `
       <blockquote style="font-size: 1.5em; text-align: center; max-width: 80%; margin: 40px auto;">
-        [cite_start]"Cuando el equipo entiende lo que hay que lograr, el crecimiento empieza a depender de cuánto Propósito encuentra el equipo en lo que hacen." [cite: 128]
+        "Cuando el equipo entiende lo que hay que lograr, el crecimiento empieza a depender de cuánto Propósito encuentra el equipo en lo que hacen." 
       </blockquote>
       <p>- Anónimo</p>
     `,
@@ -172,9 +172,9 @@ const slideContent = [
     layout: 'layout-center-focus',
     title: 'Gracias. El Viaje Continúa.',
     content: `
-      [cite_start]<p>Gracias por participar en nuestra sesión sobre gestión del talento. [cite: 130]</p>
-      <h3 style="margin-top: 50px;">¡No te quedes con dudas! [cite_start]Contáctanos para más información. [cite: 132]</h3>
-      [cite_start]<p>Jorge Méndez, especialista en implementación de estrategias efectivas. [cite: 131]</p>
+      <p>Gracias por participar en nuestra sesión sobre gestión del talento. </p>
+      <h3 style="margin-top: 50px;">¡No te quedes con dudas! Contáctanos para más información. </h3>
+      <p>Jorge Méndez, especialista en implementación de estrategias efectivas. </p>
     `
   }
 ];
