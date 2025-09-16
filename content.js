@@ -5,8 +5,9 @@ const slideContent = [
   // Diapositiva 1: Portada
   {
     layout: 'layout-center-focus',
-    title: 'EMPRESA EXITOSA: DE TAREAS A RESULTADOS', // [cite: 3]
-    subtitle: 'Transformando PYMES en Empresas Exitosas y Sostenibles', // [cite: 5]
+    title: '¡Bienvenidos a Consolidación 360°!, 
+    subtitle: 'EMPRESA EXITOSA: DE TAREAS A RESULTADOS 
+    content:'Transformando PYMES en Empresas Exitosas y Sostenibles', 
     image: 'assets/images/slide-1.png',
     background: '#FFFFFF' 
   },
@@ -14,9 +15,12 @@ const slideContent = [
   // Diapositiva 2: Nuestra Misión
   {
     layout: 'layout-split',
-    title: 'NUESTRA MISIÓN: TU TRANSFORMACIÓN', // [cite: 25]
+    title: 'Mi Empresa Crece: Nuestra Esencia'
+    subtitle:'NUESTRA MISIÓN: TU TRANSFORMACIÓN', 
     content: `
-      <p>Mi Empresa Crece es tu socio estratégico para la consolidación de tu negocio. </p>
+    <p style="text-align: center; max-width: 80%; margin: 0 auto 30px auto;">
+         <strong>Metodología probada</strong>. 
+    <p>Mi Empresa Crece es tu socio estratégico para la consolidación de tu negocio. </p>
       <h3 style="margin-top: 40px; font-style: italic; border-left: 4px solid var(--accent-color); padding-left: 15px;">
         "No hay transformación empresarial sin transformación personal." 
       </h3>
@@ -24,61 +28,34 @@ const slideContent = [
     image: 'assets/images/slide-2.1.png' // REEMPLAZA ESTA IMAGEN
   },
 
-  // Diapositiva 3: La Hoja de Ruta
+   // Diapositiva 3: Tu Programa de Transformación 
   {
-    layout: 'layout-infographic',
-    title: 'LA HOJA DE RUTA HACIA LA CONSOLIDACIÓN', // [cite: 146]
-    content: `
-      <div class="icon-grid">
-        <div class="icon-item">
-          <i class="fas fa-users" style="color: var(--accent-color);"></i>
-          <p><strong>(A) Equipos con Ownership</strong></p>  
-        </div>
-        <div class="connector">&rarr;</div>
-        <div class="icon-item">
-          <i class="fas fa-chart-line"></i>
-          <p>(B) Ecosistema Digital</p>  
-        </div>
-        <div class="connector">&rarr;</div>
-        <div class="icon-item">
-          <i class="fas fa-coins"></i>
-          <p>(C) Inversiones Inteligentes</p> 
-        </div>
-      </div>
-    `,
-    image: 'assets/images/slide-3.png',
+  layout: 'layout-infographic',
+  title: 'Tu Programa de Transformación',
+  // Se elimina el texto que estaba antes del icon-grid para permitir el centrado vertical.
+  content: '<div class="icon-grid"><div class="icon-item"><i class="fas fa-users"></i><p>Equipo</p></div><div class="connector">&rarr;</div><div class="icon-item"><i class="fas fa-chart-line"></i><p>Ventas</p></div><div class="connector">&rarr;</div><div class="icon-item"><i class="fas fa-coins" style="color: var(--accent-color);"></i><p><strong>Inversión</strong></p></div></div>'
   },
 
   // Diapositiva 4: Sus Guías
   {
     layout: 'layout-split',
     title: 'Sus Guías en este Viaje',
-    content: `
-      <p>Expertos dedicados a potenciar la gestión y transformación de tu empresa.</p>
-    `,
-    image: 'assets/images/facilitador-abugaber.jpg', // REEMPLAZA ESTA IMAGEN
-    image2: 'assets/images/facilitador-mendez.jpg' // REEMPLAZA ESTA IMAGEN
+    content: '</strong>.</p><div style="text-align: center; margin-top: 40px; font-size: 1.2em; font-weight: bold;">Sesión Grupal &rarr; Implementación &rarr; Sesión Individual &rarr; Ajuste</div>',
+    image: 'assets/images/slide-4.jpeg',
+    image2: 'assets/images/slide-4.png'
   },
 
   // Diapositiva 5: Reglas del Juego
   {
-    layout: 'layout-default slide-5-custom',
-    title: 'REGLAS DEL JUEGO Y DINÁMICA', // [cite: 27]
-    content: `
-      <p style="text-align: center;">Establecemos un marco de compromiso para construir juntos.</p>
-      <ul class="infographic-list">
-        <li><i class="fas fa-video"></i> <div><strong>Cámara encendida para conectar</strong><br>Es un taller de consultoría aplicada. </div></li>
-        <li><i class="fas fa-comments"></i> <div><strong>Participación activa para el mayor beneficio</strong><br>Tu involucramiento es clave. </div></li>
-        <li><i class="fas fa-laptop"></i> <div><strong>Mentalidad de implementación</strong><br>Indispensable acceder desde PC, Laptop o Tablet. </div></li>
-        <li><i class="fas fa-hand-paper"></i> <div><strong>Levanta la mano para participar</strong><br>Usa el indicador para pedir la palabra. </div></li>
-      </ul>
-    `
+  layout: 'layout-default slide-5-custom', // Añadimos una clase para estilos específicos
+  title: 'Reglas del Juego y Dinámica',
+  content: '<p style="text-align: center;">Establecer un marco de Responsabilidad y compromiso. No son reglas, son los <strong>cimientos para construir juntos</strong>.</p><ul class="infographic-list"><li><i class="fas fa-video"></i> <div><strong>Cámara encendida = Compromiso</strong><br>Estar presente y conectado con el grupo.</div></li><li><i class="fas fa-microphone-lines"></i> <div><strong>Participación activa = Proactividad</strong><br>Tu aprendizaje depende de tu involucramiento.</div></li><li><i class="fas fa-lightbulb"></i> <div><strong>Mente abierta = Crecimiento</strong><br>Dispuesto a desaprender y adoptar nuevos métodos.</div></li><li><i class="fas fa-clock"></i> <div><strong>Puntualidad = Respeto</strong><br>Valoramos tu tiempo y el de los demás.</div></li></ul>'
   },
 
   // Diapositiva 6: Objetivos de Transformación
   {
     layout: 'layout-split',
-    title: 'OBJETIVOS DE TRANSFORMACIÓN', // [cite: 38]
+    title: 'OBJETIVOS DE TRANSFORMACIÓN',
     content: `
       <p>Estrategias para Fortalecer la Responsabilidad, la Delegación y la Retroalimentación en tu equipo. </p>
       <ul>
@@ -90,22 +67,22 @@ const slideContent = [
         <li>Usar Feedback 360° para consolidar personal clave. </li>
       </ul>
     `,
-    image: 'assets/images/objetivos-sesion-a.jpg' // REEMPLAZA ESTA IMAGEN
+    image: 'assets/images/slide-6.png' // REEMPLAZA ESTA IMAGEN
   },
 
   // Diapositiva 7: Conceptos Clave
   {
     layout: 'layout-center-focus',
-    title: 'CONCEPTO CLAVE DEL PROGRAMA', // [cite: 52]
-    image: 'assets/images/conceptos-clave-sesion-a.png', // REEMPLAZA ESTA IMAGEN
+    title: 'CONCEPTO CLAVE DEL PROGRAMA', 
+    image: 'assets/images/slide-7.png', // REEMPLAZA ESTA IMAGEN
     content: 'Gestión efectiva del personal, Ownership, Tramo de control, Delegación, Feedback 360 y más.'
   },
 
   // Diapositiva 8: Elementos Clave (Ruta de Implementación)
   {
     layout: 'layout-center-focus',
-    title: 'ELEMENTOS CLAVE DEL PROGRAMA', // [cite: 61]
-    image: 'assets/images/ruta-implementacion-sesion-a.png' // REEMPLAZA ESTA IMAGEN
+    title: 'ELEMENTOS CLAVE DEL PROGRAMA', 
+    image: 'assets/images/slide-8.0.png' // REEMPLAZA ESTA IMAGEN
   },
 
   // --- SERIE DE EJERCICIOS ---
@@ -179,3 +156,33 @@ const slideContent = [
     `
   }
 ];
+
+
+
+
+
+
+  // Diapositiva x: La Hoja de Ruta
+  {
+    layout: 'layout-infographic',
+    title: 'LA HOJA DE RUTA HACIA LA CONSOLIDACIÓN', 
+    content: `
+      <div class="icon-grid">
+        <div class="icon-item">
+          <i class="fas fa-users" style="color: var(--accent-color);"></i>
+          <p><strong>(A) Equipos con Ownership</strong></p>  
+        </div>
+        <div class="connector">&rarr;</div>
+        <div class="icon-item">
+          <i class="fas fa-chart-line"></i>
+          <p>(B) Ecosistema Digital</p>  
+        </div>
+        <div class="connector">&rarr;</div>
+        <div class="icon-item">
+          <i class="fas fa-coins"></i>
+          <p>(C) Inversiones Inteligentes</p> 
+        </div>
+      </div>
+    `,
+    image: 'assets/images/slide-3.png',
+  },
