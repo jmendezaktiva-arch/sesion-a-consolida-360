@@ -76,7 +76,22 @@ const slideContent = [
     image: 'assets/images/slide-6.png'
   },
 
-  // Diapositiva 7: Conceptos Clave
+  // Diapositiva 7: Líder orquesta
+  {
+    layout: 'layout-split',
+    title: 'LÍDER ORQUESTA VS LÍDER QUE CREA LÍDERES: Si sientes que tu día a día es apagar fuegos... estás en el lugar correcto.', 
+    content: `
+          <p>LIDERAZGO</p>
+      <ul>
+        <li>Soy el cuello de botella en las decisiones.</li>
+        <li>Mi equipo no toma la iniciativa</li>
+        <li>Hago de todo</li>
+      </ul>
+    `,
+        image: 'assets/images/slide-8.png',
+  },
+
+  // Diapositiva 8: Conceptos Clave
   {
     layout: 'layout-center-focus',
     title: 'CONCEPTO CLAVE DEL PROGRAMA', 
@@ -84,7 +99,7 @@ const slideContent = [
     content: 'Gestión efectiva del personal, Ownership, Tramo de control, Delegación, Feedback 360 y más.'
   },
 
-  // Diapositiva 8: La Hoja de Ruta
+  // Diapositiva 9: La Hoja de Ruta
   {
     layout: 'layout-center-focus',
     title: 'LA HOJA DE RUTA HACIA LA CONSOLIDACIÓN', 
@@ -97,14 +112,48 @@ const slideContent = [
     layout: 'layout-split',
     title: "EJERCICIO 1: 'DEPENDENCIA OPERATIVA DEL LÍDER'",
     content: `<h3>Objetivo:</h3><p>Identificar la dependencia del equipo en el líder para decisiones y procesos clave.</p><h3>Consideraciones:</h3><ul><li>Sé honesto, es para tu beneficio.</li><li>Analiza patrones en la operación diaria.</li><li>Conecta cada respuesta con el impacto en resultados.</li></ul>`,
-    image: 'assets/images/ejercicio-1.jpg'
+    image: 'assets/images/slide-11.png'
   },
+
+  // --- EJERCICIO 2 CORREGIDO Y REESTRUCTURADO ---
+  {
+    layout: 'layout-default', // Usamos un layout genérico
+    title: "EJERCICIO 2: 'VOCACIÓN DE PUESTOS CLAVE'",
+    // Construimos toda la estructura de 3 columnas directamente aquí
+    content: `
+      <div class="columns-wrapper">
+        
+        <div class="column">
+          <h3>Objetivo:</h3>
+          <p>Identificar la brecha entre el desempeño actual y el impacto estratégico esperado del puesto.</p>
+          <h3>Consideraciones:</h3>
+          <ul>
+            <li>Evalúa desde la perspectiva de resultados, no solo tareas.</li>
+            <li>Detecta el nivel de propiedad del puesto sobre los resultados.</li>
+          </ul>
+        </div>
+        
+        <div class="column">
+          <img src="assets/images/ejercicio-2.png" alt="Imagen del Ejercicio 2">
+        </div>
+        
+        <div class="column">
+          <img src="assets/images/ejercicio-2.1.png" alt="Segunda imagen del Ejercicio 2">
+        </div>
+
+      </div>
+    `
+    // Ya no necesitamos las propiedades 'image' e 'image2' porque están dentro de 'content'
+  },
+
   {
     layout: 'layout-split',
-    title: "EJERCICIO 2: 'VOCACIÓN DE PUESTOS CLAVE'",
-    content: `<h3>Objetivo:</h3><p>Identificar la brecha entre el desempeño actual y el impacto estratégico esperado del puesto.</p><h3>Consideraciones:</h3><ul><li>Evalúa desde la perspectiva de resultados, no solo tareas.</li><li>Detecta el nivel de propiedad del puesto sobre los resultados.</li></ul>`,
-    image: 'assets/images/ejercicio-2.jpg'
+    title: "EJERCICIO 3: 'PRIORIDADES DE MEJORA PUESTOS CLAVE'",
+    content: `<h3>Objetivo:</h3><p>Comprender cómo el colaborador puede resolver de manera satisfactoria y autónoma un problema con sentido de ownership.
+</p><h3>Consideraciones:</h3><ul><li>Enfócate en situaciones con mayor impacto estratégico.</li><li>Analiza causas raíz, no solo síntomas.</li><li>Vincula cada mejora con un cambio de mentalidad (ownership).</li></ul>`,
+    image: 'assets/images/ejercicio-4.jpg'
   },
+
   {
     layout: 'layout-split',
     title: "EJERCICIO 4: 'LA MISIÓN DEL ROL'",
