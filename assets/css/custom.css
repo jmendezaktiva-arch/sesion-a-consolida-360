@@ -287,13 +287,30 @@
   width: 100%;
 }
 
-/* --- AJUSTE PARA IMÁGENES FLEXIBLES Y CENTRADAS --- */
+/* --- ANÁLISIS A CONCIENCIA: REGLAS DEFINITIVAS DE LAYOUT --- */
+
+/* 1. Elementos de texto (títulos, párrafos, etc.) ocupan su espacio
+      natural y NO se encogen. Tienen prioridad. */
+.reveal .slides section > h1,
+.reveal .slides section > h2,
+.reveal .slides section > h3,
+.reveal .slides section > p,
+.reveal .slides section > ul,
+.reveal .slides section > div {
+    flex-shrink: 0;
+}
+
+/* 2. La imagen principal es flexible: crece para llenar el espacio
+      restante y se encoge si es necesario, adaptándose al contenido. */
 .reveal .slides section > img {
-    flex-shrink: 1; /* Permite que la imagen se encoja si no hay espacio */
-    min-height: 0;  /* Necesario para que flex-shrink funcione correctamente en imágenes */
-    object-fit: contain; /* Asegura que la imagen escale sin deformarse */
+    flex-grow: 1;           /* Permite que la imagen CREZCA para llenar el espacio vertical */
+    flex-shrink: 1;         /* Permite que la imagen SE ENCOJA si el espacio es limitado */
+    min-height: 0;          /* Parche crucial para que flexbox funcione bien con imágenes */
+    object-fit: contain;    /* Mantiene la proporción de la imagen sin deformarla */
     display: block;
-    margin: 15px auto; /* Centra la imagen y le da un margen vertical */
+    margin-top: 15px;       /* Añade un espacio superior respecto al texto */
+    margin-bottom: 0;       /* Elimina el margen inferior para que pueda llegar al borde si es necesario */
+    width: 100%;            /* Asegura que ocupe el ancho disponible */
 }
 
 /* --- NUEVAS CLASES PARA REEMPLAZAR ESTILOS EN LÍNEA --- */
