@@ -1,5 +1,4 @@
-// Archivo de Contenido para la Presentación: Sesión A
-// Para editar el texto de una diapositiva, solo modifica el objeto correspondiente aquí.
+// Archivo de Contenido para la Presentación: Sesión A (Versión Limpia)
 
 const slideContent = [
   // Diapositiva 1: Portada
@@ -7,8 +6,8 @@ const slideContent = [
     layout: 'layout-center-focus',
     title: '¡Bienvenidos a Consolidación 360°!', 
     subtitle: 'EMPRESA EXITOSA: DE TAREAS A RESULTADOS', 
-    content:'<div style="margin-bottom: 5px;"><h3>Transformando PYMES en Empresas Exitosas y Sostenibles</h3><ul style="list-style: none; padding-left: 0; text-align: center;"></p></div>', 
-    image: 'assets/images/slide-1.png',// La imagen se colocará centrada debajo del subtitulo.
+    content: '<div><h3>Transformando PYMES en Empresas Exitosas y Sostenibles</h3></div>', 
+    image: 'assets/images/slide-1.png',
     background: '#FFFFFF' 
   },
   
@@ -18,38 +17,45 @@ const slideContent = [
     title: 'Mi Empresa Crece: Nuestra Esencia',
     subtitle:'NUESTRA MISIÓN: TU TRANSFORMACIÓN', 
     content: `
-    <p style="text-align: center; max-width: 80%; margin: 0 auto 30px auto;">
-         <strong>Metodología probada</strong>. 
-    <p>Mi Empresa Crece es tu socio estratégico para la consolidación de tu negocio. </p>
-      <h3 style="margin-top: 40px; font-style: italic; border-left: 4px solid var(--accent-color); padding-left: 15px;">
-        "No hay transformación empresarial sin transformación personal." 
-      </h3>
+      <p><strong>Metodología probada</strong>. Mi Empresa Crece es tu socio estratégico para la consolidación de tu negocio.</p>
+      <h3 class="highlight-quote">"No hay transformación empresarial sin transformación personal."</h3>
     `,
-    image: 'assets/images/slide-2.1.png' // REEMPLAZA ESTA IMAGEN
+    image: 'assets/images/slide-2.1.png'
   },
 
-   // Diapositiva 3: Tu Programa de Transformación 
+  // Diapositiva 3: Tu Programa de Transformación 
   {
-  layout: 'layout-infographic',
-  title: 'Tu Programa de Transformación',
-  // Se elimina el texto que estaba antes del icon-grid para permitir el centrado vertical.
-  content: '<div class="icon-grid"><div class="icon-item"><i class="fas fa-users"></i><p>Equipo</p></div><div class="connector">&rarr;</div><div class="icon-item"><i class="fas fa-chart-line"></i><p>Ventas</p></div><div class="connector">&rarr;</div><div class="icon-item"><i class="fas fa-coins" style="color: var(--accent-color);"></i><p><strong>Inversión</strong></p></div></div>'
+    layout: 'layout-infographic',
+    title: 'Tu Programa de Transformación',
+    content: `<div class="icon-grid">
+                <div class="icon-item"><i class="fas fa-users"></i><p>Equipo</p></div>
+                <div class="connector">&rarr;</div>
+                <div class="icon-item"><i class="fas fa-chart-line"></i><p>Ventas</p></div>
+                <div class="connector">&rarr;</div>
+                <div class="icon-item"><i class="fas fa-coins icon-highlight"></i><p><strong>Inversión</strong></p></div>
+              </div>`
   },
 
   // Diapositiva 4: Sus Guías
   {
     layout: 'layout-split',
     title: 'Sus Guías en este Viaje',
-    content: '</strong>.</p><div style="text-align: center; margin-top: 40px; font-size: 1.2em; font-weight: bold;">Sesión Grupal &rarr; Implementación &rarr; Sesión Individual &rarr; Ajuste</div>',
+    content: '<p><strong>Expertos dedicados a la implementación.</strong></p><div class="session-flow-text">Sesión Grupal &rarr; Implementación &rarr; Sesión Individual &rarr; Ajuste</div>',
     image: 'assets/images/slide-4.jpeg',
     image2: 'assets/images/slide-4.png'
   },
 
   // Diapositiva 5: Reglas del Juego
   {
-  layout: 'layout-default slide-5-custom', // Añadimos una clase para estilos específicos
-  title: 'Reglas del Juego y Dinámica',
-  content: '<p style="text-align: center;">Establecer un marco de Responsabilidad y compromiso. No son reglas, son los <strong>cimientos para construir juntos</strong>.</p><ul class="infographic-list"><li><i class="fas fa-video"></i> <div><strong>Cámara encendida = Compromiso</strong><br>Estar presente y conectado con el grupo.</div></li><li><i class="fas fa-microphone-lines"></i> <div><strong>Participación activa = Proactividad</strong><br>Tu aprendizaje depende de tu involucramiento.</div></li><li><i class="fas fa-lightbulb"></i> <div><strong>Mente abierta = Crecimiento</strong><br>Dispuesto a desaprender y adoptar nuevos métodos.</div></li><li><i class="fas fa-clock"></i> <div><strong>Puntualidad = Respeto</strong><br>Valoramos tu tiempo y el de los demás.</div></li></ul>'
+    layout: 'layout-default slide-5-custom',
+    title: 'Reglas del Juego y Dinámica',
+    content: `<p>Establecer un marco de Responsabilidad y compromiso. No son reglas, son los <strong>cimientos para construir juntos</strong>.</p>
+              <ul class="infographic-list">
+                <li><i class="fas fa-video"></i> <div><strong>Cámara encendida = Compromiso</strong><br>Estar presente y conectado con el grupo.</div></li>
+                <li><i class="fas fa-microphone-lines"></i> <div><strong>Participación activa = Proactividad</strong><br>Tu aprendizaje depende de tu involucramiento.</div></li>
+                <li><i class="fas fa-lightbulb"></i> <div><strong>Mente abierta = Crecimiento</strong><br>Dispuesto a desaprender y adoptar nuevos métodos.</div></li>
+                <li><i class="fas fa-clock"></i> <div><strong>Puntualidad = Respeto</strong><br>Valoramos tu tiempo y el de los demás.</div></li>
+              </ul>`
   },
 
   // Diapositiva 6: Objetivos de Transformación
@@ -57,117 +63,75 @@ const slideContent = [
     layout: 'layout-split',
     title: 'OBJETIVOS DE TRANSFORMACIÓN',
     content: `
-      <p>Estrategias para Fortalecer la Responsabilidad, la Delegación y la Retroalimentación en tu equipo. </p>
+      <p>Estrategias para Fortalecer la Responsabilidad, la Delegación y la Retroalimentación en tu equipo.</p>
       <ul>
-        <li>Diagnosticar el nivel de 'ownership'. </li>
-        <li>Conectar cada rol con el propósito estratégico. </li>
-        <li>Rediseñar el tramo de control. </li>
-        <li>Aplicar un método de delegación efectiva. </li>
-        <li>Implementar el modelo de semáforo para medir progreso. </li>
-        <li>Usar Feedback 360° para consolidar personal clave. </li>
+        <li>Diagnosticar el nivel de 'ownership'.</li>
+        <li>Conectar cada rol con el propósito estratégico.</li>
+        <li>Rediseñar el tramo de control.</li>
+        <li>Aplicar un método de delegación efectiva.</li>
+        <li>Implementar el modelo de semáforo para medir progreso.</li>
+        <li>Usar Feedback 360° para consolidar personal clave.</li>
       </ul>
     `,
-    image: 'assets/images/slide-6.png' // REEMPLAZA ESTA IMAGEN
+    image: 'assets/images/slide-6.png'
   },
 
   // Diapositiva 7: Conceptos Clave
   {
     layout: 'layout-center-focus',
     title: 'CONCEPTO CLAVE DEL PROGRAMA', 
-    image: 'assets/images/slide-7.png', // REEMPLAZA ESTA IMAGEN
+    image: 'assets/images/slide-7.png',
     content: 'Gestión efectiva del personal, Ownership, Tramo de control, Delegación, Feedback 360 y más.'
   },
 
-  // Diapositiva 8: Elementos Clave (Ruta de Implementación)
+  // Diapositiva 8: Elementos Clave
   {
     layout: 'layout-center-focus',
     title: 'ELEMENTOS CLAVE DEL PROGRAMA', 
-    image: 'assets/images/slide-8.0.png' // REEMPLAZA ESTA IMAGEN
+    image: 'assets/images/slide-8.0.png'
   },
-
  
-   // Diapositiva 9: La Hoja de Ruta
+  // Diapositiva 9: La Hoja de Ruta
   {
     layout: 'layout-infographic',
     title: 'LA HOJA DE RUTA HACIA LA CONSOLIDACIÓN', 
     content: `
       <div class="icon-grid">
-        <div class="icon-item">
-          <i class="fas fa-users" style="color: var(--accent-color);"></i>
-          <p><strong>(A) Equipos con Ownership</strong></p>  
-        </div>
+        <div class="icon-item"><i class="fas fa-users icon-highlight"></i><p><strong>(A) Equipos con Ownership</strong></p></div>
         <div class="connector">&rarr;</div>
-        <div class="icon-item">
-          <i class="fas fa-chart-line"></i>
-          <p>(B) Ecosistema Digital</p>  
-        </div>
+        <div class="icon-item"><i class="fas fa-chart-line"></i><p>(B) Ecosistema Digital</p></div>
         <div class="connector">&rarr;</div>
-        <div class="icon-item">
-          <i class="fas fa-coins"></i>
-          <p>(C) Inversiones Inteligentes</p> 
-        </div>
+        <div class="icon-item"><i class="fas fa-coins"></i><p>(C) Inversiones Inteligentes</p></div>
       </div>
     `,
-    image: 'assets/images/slide-3.png',
   },
  
   // --- SERIE DE EJERCICIOS ---
+  // ... (El resto de las diapositivas de ejercicios ya estaban limpias)
   {
     layout: 'layout-split',
-    title: "EJERCICIO 1: 'DEPENDENCIA OPERATIVA DEL LÍDER'", // [cite: 65]
-    content: `
-      <h3>Objetivo:</h3>
-      <p>Identificar la dependencia del equipo en el líder para decisiones y procesos clave. </p>
-      <h3>Consideraciones:</h3>
-      <ul>
-        <li>Sé honesto, es para tu beneficio. </li>
-        <li>Analiza patrones en la operación diaria. </li>
-        <li>Conecta cada respuesta con el impacto en resultados. </li>
-      </ul>
-    `,
-    image: 'assets/images/ejercicio-1.jpg' // REEMPLAZA ESTA IMAGEN
+    title: "EJERCICIO 1: 'DEPENDENCIA OPERATIVA DEL LÍDER'",
+    content: `<h3>Objetivo:</h3><p>Identificar la dependencia del equipo en el líder para decisiones y procesos clave.</p><h3>Consideraciones:</h3><ul><li>Sé honesto, es para tu beneficio.</li><li>Analiza patrones en la operación diaria.</li><li>Conecta cada respuesta con el impacto en resultados.</li></ul>`,
+    image: 'assets/images/ejercicio-1.jpg'
   },
   {
     layout: 'layout-split',
-    title: "EJERCICIO 2: 'VOCACIÓN DE PUESTOS CLAVE'", // [cite: 77]
-    content: `
-      <h3>Objetivo:</h3>
-      <p>Identificar la brecha entre el desempeño actual y el impacto estratégico esperado del puesto. </p>
-      <h3>Consideraciones:</h3>
-      <ul>
-        <li>Evalúa desde la perspectiva de resultados, no solo tareas. </li>
-        <li>Detecta el nivel de propiedad del puesto sobre los resultados. </li>
-      </ul>
-    `,
-    image: 'assets/images/ejercicio-2.jpg' // REEMPLAZA ESTA IMAGEN
+    title: "EJERCICIO 2: 'VOCACIÓN DE PUESTOS CLAVE'",
+    content: `<h3>Objetivo:</h3><p>Identificar la brecha entre el desempeño actual y el impacto estratégico esperado del puesto.</p><h3>Consideraciones:</h3><ul><li>Evalúa desde la perspectiva de resultados, no solo tareas.</li><li>Detecta el nivel de propiedad del puesto sobre los resultados.</li></ul>`,
+    image: 'assets/images/ejercicio-2.jpg'
   },
   {
     layout: 'layout-split',
-    title: "EJERCICIO 4: 'LA MISIÓN DEL ROL'", // [cite: 93]
-    content: `
-      <h3>Objetivo:</h3>
-      <p>Documentar una definición de puesto clave que sea clara, potente e inspiradora. </p>
-      <h3>Consideraciones:</h3>
-      <ul>
-        <li>Define la misión desde el impacto estratégico. </li>
-        <li>Alinea responsabilidades con objetivos medibles. </li>
-        <li>Incluye el propósito para inspirar ownership. </li>
-      </ul>
-    `,
-    image: 'assets/images/ejercicio-4.jpg' // REEMPLAZA ESTA IMAGEN
+    title: "EJERCICIO 4: 'LA MISIÓN DEL ROL'",
+    content: `<h3>Objetivo:</h3><p>Documentar una definición de puesto clave que sea clara, potente e inspiradora.</p><h3>Consideraciones:</h3><ul><li>Define la misión desde el impacto estratégico.</li><li>Alinea responsabilidades con objetivos medibles.</li><li>Incluye el propósito para inspirar ownership.</li></ul>`,
+    image: 'assets/images/ejercicio-4.jpg'
   },
-  // ... (Puedes seguir este patrón para los demás ejercicios)
 
   // Diapositiva de Cierre: Reflexión
   {
     layout: 'layout-center-focus',
-    title: 'REFLEXIÓN', // [cite: 127]
-    content: `
-      <blockquote style="font-size: 1.5em; text-align: center; max-width: 80%; margin: 40px auto;">
-        "Cuando el equipo entiende lo que hay que lograr, el crecimiento empieza a depender de cuánto Propósito encuentra el equipo en lo que hacen." 
-      </blockquote>
-      <p>- Anónimo</p>
-    `,
+    title: 'REFLEXIÓN',
+    content: `<blockquote>"Cuando el equipo entiende lo que hay que lograr, el crecimiento empieza a depender de cuánto Propósito encuentra el equipo en lo que hacen."</blockquote><p>- Anónimo</p>`,
     background: '#F4F4F4'
   },
   
@@ -175,16 +139,6 @@ const slideContent = [
   {
     layout: 'layout-center-focus',
     title: 'Gracias. El Viaje Continúa.',
-    content: `
-      <p>Gracias por participar en nuestra sesión sobre gestión del talento. </p>
-      <h3 style="margin-top: 50px;">¡No te quedes con dudas! Contáctanos para más información. </h3>
-      <p>Jorge Méndez, especialista en implementación de estrategias efectivas. </p>
-    `
+    content: `<p>Gracias por participar en nuestra sesión sobre gestión del talento.</p><h3 class="contact-heading">¡No te quedes con dudas! Contáctanos para más información.</h3><p>Jorge Méndez, especialista en implementación de estrategias efectivas.</p>`
   }
 ];
-
-
-
-
-
-
