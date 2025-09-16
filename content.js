@@ -7,7 +7,8 @@ const slideContent = [
     layout: 'layout-center-focus',
     title: 'EMPRESA EXITOSA: DE TAREAS A RESULTADOS', // [cite: 3]
     subtitle: 'Transformando PYMES en Empresas Exitosas y Sostenibles', // [cite: 5]
-    image: 'assets/images/portada-sesion-a.jpg', // REEMPLAZA ESTA IMAGEN
+    image: 'slide-1.png', // REEMPLAZA ESTA IMAGEN
+    image: 'slide-1.2.png', // REEMPLAZA ESTA IMAGEN
     background: '#FFFFFF' 
   },
   
