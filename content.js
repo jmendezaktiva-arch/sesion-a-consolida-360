@@ -7,8 +7,7 @@ const slideContent = [
     layout: 'layout-center-focus',
     title: 'EMPRESA EXITOSA: DE TAREAS A RESULTADOS', // [cite: 3]
     subtitle: 'Transformando PYMES en Empresas Exitosas y Sostenibles', // [cite: 5]
-    image: 'assets/images/slide-1.png', 
-    image: 'assets/images/slide-1.2.png',
+    image: 'assets/images/slide-1.png',
     background: '#FFFFFF' 
   },
   
@@ -22,7 +21,7 @@ const slideContent = [
         "No hay transformación empresarial sin transformación personal." 
       </h3>
     `,
-    image: 'assets/images/mision-sesion-a.jpg' // REEMPLAZA ESTA IMAGEN
+    image: 'assets/images/slide-2.1.png' // REEMPLAZA ESTA IMAGEN
   },
 
   // Diapositiva 3: La Hoja de Ruta
@@ -47,6 +46,7 @@ const slideContent = [
         </div>
       </div>
     `
+    image: 'assets/images/slide-3.png',
   },
 
   // Diapositiva 4: Sus Guías
