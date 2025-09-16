@@ -17,49 +17,57 @@
     color: var(--text-color);
 }
 
+/* ========================================================================== */
+/* --- SECCIÓN DE LAYOUT GLOBAL CORREGIDA Y DEFINITIVA --- */
+/* ========================================================================== */
+
+/* 1. Contenedor Principal de Diapositiva (LA CORRECCIÓN MÁS IMPORTANTE) */
 .reveal .slides section {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* <-- Palabra "center" eliminada */
+    /* CORRECCIÓN: Alineamos el contenido arriba para evitar el corte superior. */
+    justify-content: flex-start; 
     height: 100%;
     padding: 20px 40px;
     box-sizing: border-box;
+    text-align: center; /* Centramos el texto por defecto */
 }
 
-/* 7. TAMAÑOS DE FUENTE CONSISTENTES PARA TODAS LAS DIAPOSITIVAS */
+/* 2. Reglas de Texto (Títulos, etc.) */
 .reveal h1 { 
-    font-size: 2.2em; /* Tamaño para Títulos */
+    font-size: 2.2em;
     color: var(--primary-color); 
     margin-bottom: 15px;
+    flex-shrink: 0; /* NO se encogen */
 }
 .reveal h2 { 
     font-size: 1.8em; 
     color: var(--primary-color);
     margin-bottom: 15px;
+    flex-shrink: 0; /* NO se encogen */
 }
-.reveal h3 { 
-    font-size: 1.2em; /* Tamaño para Subtítulos */
-}
-.reveal p, .reveal li { 
-    font-size: 0.9em; /* Tamaño para Textos */
-}
-
+.reveal h3 { font-size: 1.2em; flex-shrink: 0; }
+.reveal p, .reveal li, .reveal div { font-size: 0.9em; flex-shrink: 0; }
 .reveal strong { color: var(--accent-color); }
 
-
-/* --- AJUSTES DE IMÁGENES --- */
-.reveal .slides img {
-    max-width: 100%;
-    object-fit: contain;
-    margin: 15px auto;
+/* 3. Regla ÚNICA y Definitiva para Imágenes Principales */
+.reveal .slides section > img {
+    flex-grow: 1;           /* Crece para llenar el espacio vertical restante */
+    flex-shrink: 1;         /* Se encoge si el espacio es limitado */
+    min-height: 0;          /* Parche crucial para que flexbox funcione con imágenes */
+    object-fit: contain;    /* Mantiene la proporción sin deformarse */
+    display: block;
+    margin: 15px auto 0 auto; /* Margen superior y centra, sin margen inferior */
+    width: 100%;
 }
+
 .facilitator-photo {
     width: 250px;
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
+    margin: 10px; /* Margen unificado */
 }
-
 
 /* --- PLANTILLAS DE DISEÑO --- */
 .layout-default { text-align: left; align-items: flex-start; }
