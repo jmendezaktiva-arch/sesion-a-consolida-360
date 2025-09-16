@@ -362,3 +362,14 @@
     list-style: none;
     padding-left: 0;
 }
+
+/* ========================================================================== */
+/* --- AJUSTE FINAL Y FORZADO PARA DIAPOSITIVAS CON CORTE --- */
+/* ========================================================================== */
+
+/* Esta regla se enfoca específicamente en los layouts como el de la Diapositiva 7
+   y utiliza !important para garantizar que anule cualquier otro estilo en conflicto. */
+
+.layout-center-focus {
+    justify-content: flex-start !important; /* ¡FUERZA la alineación superior! */
+}
