@@ -373,3 +373,24 @@
 .layout-center-focus {
     justify-content: flex-start !important; /* ¡FUERZA la alineación superior! */
 }
+
+/* --- NUEVOS ESTILOS PARA LAYOUTS CON MÚLTIPLES COLUMNAS --- */
+
+.columns-wrapper {
+  display: flex;
+  align-items: flex-start; /* Alinea el contenido de las columnas arriba */
+  justify-content: center;
+  gap: 30px;               /* Espacio entre las columnas */
+  width: 100%;
+  margin-top: 20px;
+}
+
+.columns-wrapper .column {
+  flex: 1; /* Hace que cada columna ocupe el mismo espacio */
+  text-align: left;
+}
+
+.columns-wrapper .column img {
+  width: 100%; /* La imagen ocupa todo el ancho de su columna */
+  border-radius: 8px;
+}
