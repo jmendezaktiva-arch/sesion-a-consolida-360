@@ -22,7 +22,7 @@
     flex-direction: column;
     justify-content: center; /* <-- Palabra "center" eliminada */
     height: 100%;
-    padding: 2vw;
+    padding: 20px 40px;
     box-sizing: border-box;
 }
 
@@ -30,12 +30,12 @@
 .reveal h1 { 
     font-size: 2.2em; /* Tamaño para Títulos */
     color: var(--primary-color); 
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .reveal h2 { 
     font-size: 1.8em; 
     color: var(--primary-color);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .reveal h3 { 
     font-size: 1.2em; /* Tamaño para Subtítulos */
@@ -285,4 +285,55 @@
 .slide-19-custom h1 {
   text-align: center;
   width: 100%;
+}
+
+/* --- AJUSTE PARA IMÁGENES FLEXIBLES Y CENTRADAS --- */
+.reveal .slides section > img {
+    flex-shrink: 1; /* Permite que la imagen se encoja si no hay espacio */
+    min-height: 0;  /* Necesario para que flex-shrink funcione correctamente en imágenes */
+    object-fit: contain; /* Asegura que la imagen escale sin deformarse */
+    display: block;
+    margin: 15px auto; /* Centra la imagen y le da un margen vertical */
+}
+
+/* --- NUEVAS CLASES PARA REEMPLAZAR ESTILOS EN LÍNEA --- */
+
+/* Estilo para las citas o frases destacadas (usado en Diapo 2) */
+.highlight-quote {
+    margin-top: 40px;
+    font-style: italic;
+    border-left: 4px solid var(--accent-color);
+    padding-left: 15px;
+}
+
+/* Estilo para el texto de flujo de la sesión (usado en Diapo 4) */
+.session-flow-text {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Estilo para resaltar un icono (usado en Diapo 3 y 9) */
+.icon-highlight {
+    color: var(--accent-color);
+}
+
+/* Estilo general para las citas en bloque (usado en Diapo de Reflexión) */
+.reveal blockquote {
+    font-size: 1.5em;
+    text-align: center;
+    max-width: 80%;
+    margin: 40px auto;
+}
+
+/* Estilo para el encabezado de la diapositiva final de contacto */
+.contact-heading {
+    margin-top: 50px;
+}
+
+/* Estilo para listas sin viñetas (usado en Diapo 1) */
+.no-style-list {
+    list-style: none;
+    padding-left: 0;
 }
