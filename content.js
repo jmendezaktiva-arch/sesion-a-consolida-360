@@ -84,26 +84,11 @@ const slideContent = [
     content: 'Gestión efectiva del personal, Ownership, Tramo de control, Delegación, Feedback 360 y más.'
   },
 
-  // Diapositiva 8: Elementos Clave
+  // Diapositiva 8: La Hoja de Ruta
   {
     layout: 'layout-center-focus',
-    title: 'ELEMENTOS CLAVE DEL PROGRAMA', 
-    image: 'assets/images/slide-8.0.png'
-  },
- 
-  // Diapositiva 9: La Hoja de Ruta
-  {
-    layout: 'layout-infographic',
     title: 'LA HOJA DE RUTA HACIA LA CONSOLIDACIÓN', 
-    content: `
-      <div class="icon-grid">
-        <div class="icon-item"><i class="fas fa-users icon-highlight"></i><p><strong>(A) Equipos con Ownership</strong></p></div>
-        <div class="connector">&rarr;</div>
-        <div class="icon-item"><i class="fas fa-chart-line"></i><p>(B) Ecosistema Digital</p></div>
-        <div class="connector">&rarr;</div>
-        <div class="icon-item"><i class="fas fa-coins"></i><p>(C) Inversiones Inteligentes</p></div>
-      </div>
-    `,
+    image: 'assets/images/slide-8.0.png'
   },
  
   // --- SERIE DE EJERCICIOS ---
