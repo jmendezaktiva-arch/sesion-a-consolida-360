@@ -45,7 +45,7 @@ const slideContent = [
           <p>(C) Inversiones Inteligentes</p> 
         </div>
       </div>
-    `
+    `,
     image: 'assets/images/slide-3.png',
   },
 
