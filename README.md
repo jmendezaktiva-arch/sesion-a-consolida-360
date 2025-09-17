@@ -1,4 +1,4 @@
-Presentación: Sesión C - Gasto Inteligente, Inversiones EfectivasEste repositorio contiene el código fuente de la presentación web interactiva para la "Sesión C: Gasto Inteligente, Inversiones Efectivas". El proyecto está construido con Reveal.js y está diseñado para ser fácilmente actualizable y desplegable.✨ Estructura del ProyectoEl proyecto está organizado de forma modular para separar el contenido de la estructura y la lógica, facilitando su mantenimiento./
+Presentación: Sesión A - Gasto Inteligente, Inversiones EfectivasEste repositorio contiene el código fuente de la presentación web interactiva para la "Sesión A: Gasto Inteligente, Inversiones Efectivas". El proyecto está construido con Reveal.js y está diseñado para ser fácilmente actualizable y desplegable.✨ Estructura del ProyectoEl proyecto está organizado de forma modular para separar el contenido de la estructura y la lógica, facilitando su mantenimiento./
 |-- index.html          # Esqueleto principal de la presentación.
 |-- content.js          # ¡IMPORTANTE! Aquí vive todo el texto de las diapositivas.
 |-- /assets/
