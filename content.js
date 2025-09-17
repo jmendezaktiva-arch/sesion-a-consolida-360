@@ -150,6 +150,70 @@ const slideContent = [
     image: 'assets/images/ejercicio-4.png'
   },
 
+{
+    layout: 'layout-split',
+    [cite_start]title: "EJERCICIO 5: 'GUÍA DE BOLSILLO PARA UNA DELEGACIÓN EXITOSA'", // [cite: 95]
+    content: `
+      <h3>OBJETIVO:</h3>
+      [cite_start]<p>Realizar un diagnóstico rápido de cuánto aplicas como líder las buenas prácticas de delegación. [cite: 98]</p>
+      <h3>CONSIDERACIONES:</h3>
+      <ul>
+        [cite_start]<li>Evalúa objetivamente cómo delegas actualmente. [cite: 100]</li>
+        [cite_start]<li>Céntrate en tareas estratégicas y no sólo operativas. [cite: 101]</li>
+        [cite_start]<li>Analiza el proceso, no solo el resultado. [cite: 102]</li>
+      </ul>
+    `,
+    image: 'assets/images/ejercicio-5.png' // Asegúrate de añadir la imagen correspondiente.
+  },
+
+  {
+    layout: 'layout-split',
+    [cite_start]title: "EJERCICIO 6: 'FORMATO DE RETROALIMENTACIÓN SEMÁFORO'", // [cite: 109]
+    content: `
+      <h3>OBJETIVO:</h3>
+      [cite_start]<p>Implementar un sistema para mejorar los resultados y Ownership de los colaboradores de manera objetiva y ágil. [cite: 104]</p>
+      <h3>CONSIDERACIONES:</h3>
+      <ul>
+        [cite_start]<li>Sé objetivo, este ejercicio es la antesala para establecer metas claras. [cite: 106]</li>
+        [cite_start]<li>Es una herramienta ágil para aplicar con constancia y formalidad. [cite: 107]</li>
+        [cite_start]<li>No sustituye la definición de indicadores de desempeño. [cite: 108]</li>
+      </ul>
+    `,
+    image: 'assets/images/ejercicio6.png' // Asegúrate de añadir la imagen correspondiente.
+  },
+
+  {
+    layout: 'layout-split',
+    [cite_start]title: "EJERCICIO 7: 'GUÍA DE OBSERVACIÓN PARA ROLE-PLAY'", // [cite: 117]
+    content: `
+      <h3>OBJETIVO:</h3>
+      [cite_start]<p>Permitir la práctica del ciclo de delegación y feedback en un entorno seguro para afinar habilidades de seguimiento. [cite: 112]</p>
+      <h3>CONSIDERACIONES:</h3>
+      <ul>
+        [cite_start]<li>Asume el ejercicio como una práctica real de liderazgo. [cite: 114]</li>
+        [cite_start]<li>Observa y registra conductas, no juicios. [cite: 115]</li>
+        [cite_start]<li>Identifica aprendizajes aplicables a tu negocio. [cite: 116]</li>
+      </ul>
+    `,
+    image: 'assets/images/ejercicio-7.png' // Asegúrate de añadir la imagen correspondiente.
+  },
+
+  {
+    layout: 'layout-split',
+    [cite_start]title: "EJERCICIO 8: 'PLAN DE ACCIÓN DE 7 DÍAS'", // [cite: 119]
+    content: `
+      <h3>OBJETIVO:</h3>
+      [cite_start]<p>Comprometerse con un plan de acción claro para los primeros 7 días, seleccionando un grupo piloto para la implementación. [cite: 122]</p>
+      <h3>CONSIDERACIONES:</h3>
+      <ul>
+        [cite_start]<li>Sé concreto y realista en tu plan. [cite: 124]</li>
+        [cite_start]<li>Elige colaboradores estratégicos para iniciar. [cite: 125]</li>
+        [cite_start]<li>Anticipa obstáculos y prepara posibles soluciones. [cite: 126]</li>
+      </ul>
+    `,
+    image: 'assets/images/ejercicio-8.png' // Asegúrate de añadir la imagen correspondiente.
+  },
+
   // Diapositiva de Cierre: Reflexión
   {
     layout: 'layout-center-focus',
