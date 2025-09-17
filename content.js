@@ -115,35 +115,24 @@ const slideContent = [
     image: 'assets/images/slide-11.png'
   },
 
-  // --- EJERCICIO 2 CORREGIDO Y REESTRUCTURADO ---
+// --- EJERCICIO 2: REDEFINIDO A DOS COLUMNAS (TEXTO + IMAGEN) ---
   {
-    layout: 'layout-default', // Usamos un layout genérico
+    layout: 'layout-split', // Usamos el layout de pantalla dividida.
     title: "EJERCICIO 2: 'VOCACIÓN DE PUESTOS CLAVE'",
-    // Construimos toda la estructura de 3 columnas directamente aquí
+    
+    // El contenido de texto va aquí y ocupará la primera columna.
     content: `
-      <div class="columns-wrapper">
-        
-        <div class="column">
-          <h3>Objetivo:</h3>
-          <p>Identificar la brecha entre el desempeño actual y el impacto estratégico esperado del puesto.</p>
-          <h3>Consideraciones:</h3>
-          <ul>
-            <li>Evalúa desde la perspectiva de resultados, no solo tareas.</li>
-            <li>Detecta el nivel de propiedad del puesto sobre los resultados.</li>
-          </ul>
-        </div>
-        
-        <div class="column">
-          <img src="assets/images/ejercicio-2.png" alt="Imagen del Ejercicio 2">
-        </div>
-        
-        <div class="column">
-          <img src="assets/images/ejercicio-2.1.png" alt="Segunda imagen del Ejercicio 2">
-        </div>
-
-      </div>
-    `
-    // Ya no necesitamos las propiedades 'image' e 'image2' porque están dentro de 'content'
+      <h3>OBJETIVO:</h3>
+      <p>Identificar la brecha entre el desempeño actual y el impacto estratégico esperado del puesto.</p>
+      <h3>CONSIDERACIONES:</h3>
+      <ul>
+        <li>Evalúa desde la perspectiva de resultados, no solo tareas.</li>
+        <li>Detecta el nivel de propiedad del puesto sobre los resultados.</li>
+      </ul>
+    `,
+    
+    // La imagen va aquí y ocupará la segunda columna.
+    image: 'assets/images/ejercicio-2.png' // Asegúrate de que este archivo exista en tu carpeta de imágenes.
   },
 
   {
@@ -151,14 +140,14 @@ const slideContent = [
     title: "EJERCICIO 3: 'PRIORIDADES DE MEJORA PUESTOS CLAVE'",
     content: `<h3>Objetivo:</h3><p>Comprender cómo el colaborador puede resolver de manera satisfactoria y autónoma un problema con sentido de ownership.
 </p><h3>Consideraciones:</h3><ul><li>Enfócate en situaciones con mayor impacto estratégico.</li><li>Analiza causas raíz, no solo síntomas.</li><li>Vincula cada mejora con un cambio de mentalidad (ownership).</li></ul>`,
-    image: 'assets/images/ejercicio-4.jpg'
+    image: 'assets/images/ejercicio-3.png'
   },
 
   {
     layout: 'layout-split',
     title: "EJERCICIO 4: 'LA MISIÓN DEL ROL'",
     content: `<h3>Objetivo:</h3><p>Documentar una definición de puesto clave que sea clara, potente e inspiradora.</p><h3>Consideraciones:</h3><ul><li>Define la misión desde el impacto estratégico.</li><li>Alinea responsabilidades con objetivos medibles.</li><li>Incluye el propósito para inspirar ownership.</li></ul>`,
-    image: 'assets/images/ejercicio-4.jpg'
+    image: 'assets/images/ejercicio-4.png'
   },
 
   // Diapositiva de Cierre: Reflexión
