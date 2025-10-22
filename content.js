@@ -3,7 +3,7 @@
 const slideContent = [
   // Diapositiva 1: Portada
   {
-    layout: 'layout-center-focus',
+    layout: 'layout-default',
     title: '¡Bienvenidos a Consolidación 360°!', 
     subtitle: 'EMPRESA EXITOSA: DE TAREAS A RESULTADOS', 
     content: '<div><h3>Transformando PYMES en Empresas Exitosas y Sostenibles</h3></div>', 
@@ -13,7 +13,7 @@ const slideContent = [
   
   // Diapositiva 2: Nuestra Misión
   {
-    layout: 'layout-split',
+    layout: 'layout-default',
     title: 'Mi Empresa Crece: Nuestra Esencia',
     subtitle:'NUESTRA MISIÓN: TU TRANSFORMACIÓN', 
     content: `
@@ -25,7 +25,7 @@ const slideContent = [
 
   // Diapositiva 3: Tu Programa de Transformación 
   {
-    layout: 'layout-infographic',
+    layout: 'layout-center-focus',
     title: 'Tu Programa de Transformación',
     content: `<div class="icon-grid">
                 <div class="icon-item"><i class="fas fa-users icon-highlight"></i><p><strong>Equipo</strong></p></div>
