@@ -22,71 +22,80 @@ if (slideData.layout) {
     slideData.layout.split(' ').forEach(cls => section.classList.add(cls));
 }
 
-        // Título
-        if (slideData.title) {
-            const h2 = document.createElement('h2');
-            h2.textContent = slideData.title;
-            section.appendChild(h2);
-        }
+// --- INICIO DE LA MODIFICACIÓN ---
 
-        // Subtítulo
-        if (slideData.subtitle) {
-            const p = document.createElement('p');
-            p.textContent = slideData.subtitle;
-            section.appendChild(p);
-        }
-
-                // Procesar contenido HTML directo si existe
-        if (slideData.content) {
-            const contentDiv = document.createElement('div');
-            // Usamos innerHTML para que el navegador interprete las etiquetas HTML
-            contentDiv.innerHTML = slideData.content; 
-            section.appendChild(contentDiv);
-        }
-        // --- FIN DE LA CORRECCIÓN ---
-
-        // **MODIFICACIÓN CLAVE AQUÍ PARA LA IMAGEN**
-        if (slideData.image) {
-            const img = document.createElement('img');
-            // Si slideData.image es un string (URL directa), úsala.
-            // Si es un objeto, accede a slideData.image.src.
-            if (typeof slideData.image === 'string') {
-                img.src = slideData.image;
-                img.alt = `Imagen de la diapositiva ${index + 1}`; // Alt genérico si la URL es directa
-            } else if (typeof slideData.image === 'object' && slideData.image.src) {
-                img.src = slideData.image.src;
-                img.alt = slideData.image.alt || `Imagen de la diapositiva ${index + 1}`;
+        // LÓGICA CONDICIONAL: Si el layout es 'split', usa una estructura especial.
+        if (slideData.layout && slideData.layout.includes('layout-split')) {
+            // El título va primero y fuera del wrapper.
+            if (slideData.title) {
+                const h2 = document.createElement('h2');
+                h2.textContent = slideData.title;
+                section.appendChild(h2);
             }
-            
-            // Añadir una clase para que puedas estilizar las imágenes si es necesario
-            img.classList.add('slide-image'); 
-            section.appendChild(img);
-        }
-        // **FIN DE LA MODIFICACIÓN CLAVE**
 
-        // --- INICIO DE LA MODIFICACIÓN: AÑADIR BOTÓN AL WORKBOOK ---
+            // 1. Crear el contenedor que espera el CSS.
+            const wrapper = document.createElement('div');
+            wrapper.className = 'content-wrapper';
+
+            // 2. Crear un div para el contenido de texto.
+            const textContentDiv = document.createElement('div');
+            if (slideData.content) {
+                textContentDiv.innerHTML = slideData.content;
+            }
+            wrapper.appendChild(textContentDiv);
+
+            // 3. Añadir la imagen como hermana del texto, dentro del wrapper.
+            if (slideData.image) {
+                const img = document.createElement('img');
+                const imgSrc = typeof slideData.image === 'string' ? slideData.image : slideData.image.src;
+                const imgAlt = typeof slideData.image === 'object' ? slideData.image.alt : '';
+                img.src = imgSrc;
+                img.alt = imgAlt || `Imagen de la diapositiva ${index + 1}`;
+                img.classList.add('slide-image');
+                wrapper.appendChild(img);
+            }
+            section.appendChild(wrapper);
+
+        } else {
+            // LÓGICA ORIGINAL: Para todos los demás layouts, mantener la estructura simple.
+            if (slideData.title) {
+                const h2 = document.createElement('h2');
+                h2.textContent = slideData.title;
+                section.appendChild(h2);
+            }
+            if (slideData.subtitle) {
+                const p = document.createElement('p');
+                p.textContent = slideData.subtitle;
+                section.appendChild(p);
+            }
+            if (slideData.content) {
+                const contentDiv = document.createElement('div');
+                contentDiv.innerHTML = slideData.content;
+                section.appendChild(contentDiv);
+            }
+            if (slideData.image) {
+                const img = document.createElement('img');
+                const imgSrc = typeof slideData.image === 'string' ? slideData.image : slideData.image.src;
+                const imgAlt = typeof slideData.image === 'object' ? slideData.image.alt : '';
+                img.src = imgSrc;
+                img.alt = imgAlt || `Imagen de la diapositiva ${index + 1}`;
+                img.classList.add('slide-image');
+                section.appendChild(img);
+            }
+        }
+
+        // El código para el botón del cuaderno se mantiene igual y al final.
         if (slideData.workbookLink && slideData.workbookLink.url) {
             const button = document.createElement('a');
             button.href = slideData.workbookLink.url;
-            button.target = '_blank'; // Abre el cuaderno en una nueva pestaña
+            button.target = '_blank';
             button.rel = 'noopener noreferrer';
-            button.className = 'workbook-button'; // Clase para darle estilos
+            button.className = 'workbook-button';
             button.textContent = slideData.workbookLink.text || 'Abrir Cuaderno de Ejercicio';
-
             section.appendChild(button);
         }
-        // --- FIN DE LA MODIFICACIÓN ---
 
-        // Si hay una lista de puntos, agrégala (asumo que slideData.points podría existir)
-        if (slideData.points && Array.isArray(slideData.points)) {
-            const ul = document.createElement('ul');
-            slideData.points.forEach(point => {
-                const li = document.createElement('li');
-                li.textContent = point;
-                ul.appendChild(li);
-            });
-            section.appendChild(ul);
-        }
+        // --- FIN DE LA MODIFICACIÓN ---
 
         slidesContainer.appendChild(section);
     });

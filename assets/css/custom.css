@@ -71,15 +71,36 @@
     text-align: left; 
     align-items: flex-start;
 }
-.layout-split h1 { text-align: center; width: 100%; }
+.layout-split h2 { /* Corrección menor: el título es h2, no h1 */
+    text-align: center; 
+    width: 100%; 
+}
 .layout-split .content-wrapper {
     display: flex;
     align-items: center;
     gap: 30px;
     width: 100%;
     margin-top: 20px;
+    flex-grow: 1; /* Permite que el wrapper ocupe el espacio vertical disponible */
+    min-height: 0; /* Soluciona problemas de desbordamiento en contenedores flex */
 }
-.layout-split .content-wrapper > div { flex: 1; } /* Cada mitad ocupa el 50% */
+.layout-split .content-wrapper > div {
+    flex: 1; /* La mitad del espacio para el texto */
+}
+
+/* --- INICIO DE LA MODIFICACIÓN --- */
+
+/* REGLA NUEVA Y ESPECÍFICA para la imagen dentro del split-layout */
+.layout-split .content-wrapper .slide-image {
+    flex: 1; /* La otra mitad del espacio para la imagen */
+    width: 100%;
+    height: 100%; /* La altura se ajustará al contenedor flex */
+    object-fit: contain; /* Asegura que la imagen no se deforme */
+    max-height: 65vh; /* Límite de seguridad para evitar que sea demasiado grande */
+    min-height: 0;
+}
+
+/* --- FIN DE LA MODIFICACIÓN --- */
 
 /* --- PLANTILLAS ESPECIALIZADAS (REFACTORIZADAS) --- */
 
