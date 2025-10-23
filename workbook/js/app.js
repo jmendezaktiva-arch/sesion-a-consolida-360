@@ -512,9 +512,8 @@ sectionsData.forEach(data => {
             }
     });
     
-    function populateExecutiveSummary() {
+function populateExecutiveSummary() {
         const placeholder = 'No definido aún.';
-
         const dataMap = {
             'summary_cuello_botella': 'cuaderno_evaluacion_reflexion',
             'summary_problema_recurrente': 'cuaderno_vocacion_problema_recurrente',
@@ -528,44 +527,7 @@ sectionsData.forEach(data => {
             'summary_accion_prioritaria_p2': 'cuaderno_plan_accion_prioritaria_p2',
             'summary_fecha_limite_p2': 'cuaderno_plan_fecha_limite_p2',
             'summary_obstaculo_p2': 'cuaderno_plan_obstaculo_p2',
-
         };
-
-        function populateFinalReport() {
-    const placeholder = 'Aún no se ha definido.';
-    const dataMap = {
-        // Diagnóstico
-        'reporte_cuello_botella': 'cuaderno_evaluacion_reflexion',
-        'reporte_problema_recurrente': 'cuaderno_vocacion_problema_recurrente',
-        'reporte_mejora_delegacion': 'cuaderno_delegacion_observaciones',
-        // Puesto 1
-        'reporte_puesto1_titulo': 'cuaderno_vocacion_p1_titulo',
-        'reporte_p1_mision': 'cuaderno_mision_p1_mision_rol',
-        'reporte_p1_kpis': 'cuaderno_mision_p1_prioridades_exito',
-        'reporte_p1_accion': 'cuaderno_plan_accion_prioritaria_p1',
-        'reporte_p1_fecha': 'cuaderno_plan_fecha_limite_p1',
-        // Puesto 2
-        'reporte_puesto2_titulo': 'cuaderno_vocacion_p2_titulo',
-        'reporte_p2_mision': 'cuaderno_mision_p2_mision_rol',
-        'reporte_p2_kpis': 'cuaderno_mision_p2_prioridades_exito',
-        'reporte_p2_accion': 'cuaderno_plan_accion_prioritaria_p2',
-        'reporte_p2_fecha': 'cuaderno_plan_fecha_limite_p2',
-    };
-
-    for (const [elementId, storageKey] of Object.entries(dataMap)) {
-        const element = document.getElementById(elementId);
-        if (element) {
-            let value = localStorage.getItem(storageKey);
-            if ((storageKey.includes('fecha_limite')) && value) {
-                try {
-                    const date = new Date(value);
-                    value = date.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' });
-                } catch(e) { /* No hacer nada si la fecha es inválida */ }
-            }
-            element.textContent = (value && value.trim() !== '') ? value : placeholder;
-        }
-    }
-}
 
         for (const [elementId, storageKey] of Object.entries(dataMap)) {
             const element = document.getElementById(elementId);
@@ -576,6 +538,43 @@ sectionsData.forEach(data => {
                         const date = new Date(value);
                         value = date.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' }) + ' a las ' + date.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
                     } catch(e) { }
+                }
+                element.textContent = (value && value.trim() !== '') ? value : placeholder;
+            }
+        }
+    } // <-- La función populateExecutiveSummary TERMINA AQUÍ.
+
+    // CORRECTO: La función populateFinalReport se define AFUERA, al mismo nivel.
+    function populateFinalReport() {
+        const placeholder = 'Aún no se ha definido.';
+        const dataMap = {
+            // Diagnóstico
+            'reporte_cuello_botella': 'cuaderno_evaluacion_reflexion',
+            'reporte_problema_recurrente': 'cuaderno_vocacion_problema_recurrente',
+            'reporte_mejora_delegacion': 'cuaderno_delegacion_observaciones',
+            // Puesto 1
+            'reporte_puesto1_titulo': 'cuaderno_vocacion_p1_titulo',
+            'reporte_p1_mision': 'cuaderno_mision_p1_mision_rol',
+            'reporte_p1_kpis': 'cuaderno_mision_p1_prioridades_exito',
+            'reporte_p1_accion': 'cuaderno_plan_accion_prioritaria_p1',
+            'reporte_p1_fecha': 'cuaderno_plan_fecha_limite_p1',
+            // Puesto 2
+            'reporte_puesto2_titulo': 'cuaderno_vocacion_p2_titulo',
+            'reporte_p2_mision': 'cuaderno_mision_p2_mision_rol',
+            'reporte_p2_kpis': 'cuaderno_mision_p2_prioridades_exito',
+            'reporte_p2_accion': 'cuaderno_plan_accion_prioritaria_p2',
+            'reporte_p2_fecha': 'cuaderno_plan_fecha_limite_p2',
+        };
+
+        for (const [elementId, storageKey] of Object.entries(dataMap)) {
+            const element = document.getElementById(elementId);
+            if (element) {
+                let value = localStorage.getItem(storageKey);
+                if ((storageKey.includes('fecha_limite')) && value) {
+                    try {
+                        const date = new Date(value);
+                        value = date.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+                    } catch(e) { /* No hacer nada si la fecha es inválida */ }
                 }
                 element.textContent = (value && value.trim() !== '') ? value : placeholder;
             }
