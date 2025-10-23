@@ -1,0 +1,262 @@
+/* Custom CSS v2: Profesional, Modular y Universal */
+:root {
+    --r-main-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --r-heading-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --primary-color: #005A9C; /* Vibrant Blue */
+    --accent-color: #FF6F61;  /* Vibrant Coral/Orange */
+    --secondary-color: #009B77; /* Vibrant Green */
+    --text-color: #343A40;
+    --heading-color: #212529;
+    --r-background-color: #FFFFFF;
+}
+
+/* --- CONTROL GLOBAL DE FUENTES Y ESPACIO --- */
+.reveal {
+    font-size: 24px; 
+    color: var(--text-color);
+}
+
+/* ========================================================================== */
+/* --- LAYOUT GLOBAL Y REGLAS DE FLEXBOX (La base de todo) --- */
+/* ========================================================================== */
+
+/* 1. Contenedor Principal de Diapositiva: Asegura que el contenido fluya verticalmente */
+/* DESPUÉS (CORREGIDO) */
+  .reveal .slides section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* <-- ESTE ES EL CAMBIO */
+    height: 100%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* 2. Reglas de Texto: Los elementos de texto NO se encogen */
+.reveal h1, .reveal h2, .reveal h3, .reveal p, .reveal li, .reveal div {
+    flex-shrink: 0;
+}
+.reveal h1 { font-size: 2.2em; color: var(--primary-color); margin-bottom: 15px; }
+.reveal h2 { font-size: 1.8em; color: var(--primary-color); margin-bottom: 15px; }
+.reveal h3 { font-size: 1.2em; }
+.reveal p, .reveal li, .reveal div { font-size: 0.9em; }
+.reveal strong { color: var(--accent-color); }
+
+/* 3. Regla Definitiva para Imágenes Primarias: SE AJUSTA al espacio */
+.reveal .slides section > img {
+    /* flex-grow: 1; */    /* <-- ELIMINAMOS o comentamos esta línea */
+    flex-shrink: 1;
+    min-height: 0;
+    object-fit: contain;
+    display: block;
+    margin: 15px auto 0 auto;
+    width: 100%;
+    max-height: 75vh; /* <-- AÑADIMOS ESTA LÍNEA */
+}
+
+/* --- PLANTILLAS BÁSICAS (ASIGNADAS EN content.js) --- */
+
+/* 1. layout-default: Alineación Izquierda/Arriba, Contenido y luego Imagen */
+.layout-default { text-align: left; align-items: flex-start; }
+
+/* 2. layout-center-focus: Enfoca la frase centralmente */
+.layout-center-focus {
+    justify-content: center !important; /* Centra el contenido verticalmente */
+    align-items: center; /* <-- AÑADIR ESTA LÍNEA */
+    text-align: center;
+}
+
+/* 3. layout-split: Contenido + Imagen (50/50) */
+.layout-split { 
+    text-align: left; 
+    align-items: flex-start;
+}
+.layout-split h1 { text-align: center; width: 100%; }
+.layout-split .content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    margin-top: 20px;
+}
+.layout-split .content-wrapper > div { flex: 1; } /* Cada mitad ocupa el 50% */
+
+/* --- PLANTILLAS ESPECIALIZADAS (REFACTORIZADAS) --- */
+
+/* 4. Layout 50/50 Invertido (Reemplaza .slide-2-reversed) */
+.layout-split.reversed .content-wrapper {
+    flex-direction: row-reverse;
+}
+
+/* 5. Layout Dos Columnas de Texto/Imagen (Reemplaza .slide-2-custom-columns) */
+.layout-two-columns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 20px;
+}
+.layout-two-columns .column {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/* Estilos internos para el contenido de estas columnas */
+.layout-two-columns .logo-final { max-height: 130px; margin-bottom: 25px; }
+.layout-two-columns .quote-final { font-weight: bold; font-size: 1.1em; border-left: 4px solid var(--accent-color); padding-left: 15px; text-align: left; }
+.layout-two-columns .image-final { width: 100%; max-height: 350px; object-fit: cover; border-radius: 10px; }
+
+/* 6. Layout Tres Columnas (Reemplaza .slide-6-three-columns) */
+.layout-three-columns {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  width: 100%;
+}
+.layout-three-columns .column { flex: 1; text-align: left; }
+.layout-three-columns .column img { width: 100%; border-radius: 8px; object-fit: cover; }
+.layout-three-columns ul { padding-left: 20px; margin: 0; }
+
+/* --- PLANTILLA INFOGRÁFICA Y UTILIDADES (REFACTORIZADAS) --- */
+
+/* Infografía Horizontal (Reemplaza .icon-grid) */
+.horizontal-infographic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  margin-top: 150px;
+}
+.horizontal-infographic .icon-item i { font-size: 4em; margin-bottom: 15px; }
+.horizontal-infographic .icon-item p { font-size: 1.2em; font-weight: bold; }
+.horizontal-infographic .connector { font-size: 2.5em; }
+
+/* --- OPCIÓN 3: BLOQUES GEOMÉTRICOS (CORREGIDO CON PSEUDO-ELEMENTO) --- */
+.reveal {
+    background-color: #FFFFFF; /* Mantenemos un color de fondo sólido base */
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+}
+
+.reveal::before {
+    content: ''; /* Requerido para que el pseudo-elemento se genere */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Aquí movemos las reglas del patrón de fondo */
+    background-image: repeating-linear-gradient(
+        45deg, 
+        #F0F0F0,
+        #F0F0F0 1px, 
+        transparent 1px, 
+        transparent 20px
+    );
+    background-size: 20px 20px;
+    opacity: 0.9; /* La opacidad ahora solo afecta a esta capa de fondo */
+    
+    z-index: -1; /* Envía esta capa de fondo detrás del contenido */
+}
+
+/* Lista de Infografía con Iconos (Reemplaza .infographic-list) */
+.icon-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 80%;
+  margin: 50px auto 0 auto;
+}
+.icon-list li { display: flex; align-items: center; margin-bottom: 25px; }
+.icon-list i { font-size: 2.5em; color: var(--secondary-color); margin-right: 25px; width: 50px; text-align: center; }
+
+/* --- CLASES DE UTILIDAD --- */
+
+/* Clases de Estilo de Componente (Usado en content.js) */
+.highlight-quote { margin-top: 40px; font-style: italic; border-left: 4px solid var(--accent-color); padding-left: 15px; }
+.session-flow-text { text-align: center; margin-top: 40px; font-size: 1.2em; font-weight: bold; }
+.icon-highlight { color: var(--accent-color); }
+.no-style-list { list-style: none; padding-left: 0; }
+.facilitator-photo { width: 250px; height: 250px; border-radius: 50%; object-fit: cover; margin: 10px; }
+
+/* Clases de Ajuste Fino */
+.h1-centered h1 { text-align: center; width: 100%; } /* Para centrar el h1 en layouts por defecto */
+
+/* --- LOGO FIJO EN ESQUINA --- */
+
+.company-logo {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 101;
+  width: 80px;
+  height: auto;
+  opacity: 1;
+}
+
+/* --- ESTILOS PARA EL BOTÓN DEL CUADERNO DE EJERCICIOS --- */
+
+.workbook-button {
+    display: inline-block;
+    background-color: var(--accent-color); /* Usa el color de acento definido */
+    color: #FFFFFF;
+    padding: 12px 25px;
+    border-radius: 50px; /* Bordes redondeados */
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 40px; /* Espacio superior para separarlo del subtítulo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.workbook-button:hover {
+    background-color: #FFFFFF;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    transform: translateY(-3px); /* Efecto sutil al pasar el cursor */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* --- ESTILOS PARA LISTA CON VIÑETA DE IMAGEN (Lámina 6) --- */
+
+/* 1. Preparamos la lista */
+.reveal .lista-objetivos { /* <--- CAMBIO AQUÍ */
+  list-style-type: none !important; /* El !important asegura que esta regla gane */
+  padding-left: 0;       /* Eliminamos el espacio que deja la viñeta original */
+  text-align: left;      /* Aseguramos que el texto esté alineado a la izquierda */
+  margin-top: 80px;
+  font-size: 1.1em; /* Prueba valores como 1.1em o 28px */
+}
+
+/* 2. Creamos la nueva viñeta con tu imagen */
+.reveal .lista-objetivos li::before { /* <--- CAMBIO AQUÍ */
+  content: ''; /* Obligatorio para que el pseudo-elemento aparezca */
+  display: inline-block; /* Permite que el elemento tenga dimensiones */
+
+  /* --- La magia está aquí --- */
+  background-image: url('../images/slide-6.png'); /* Ruta a tu imagen */
+  background-size: contain; /* Asegura que la imagen se ajuste sin deformarse */
+  background-repeat: no-repeat;
+  
+  /* --- Ajusta el tamaño y la posición de la viñeta --- */
+  width: 28px;          /* Ancho de tu viñeta */
+  height: 28px;         /* Alto de tu viñeta */
+  margin-right: 15px;   /* Espacio entre la viñeta y el texto */
+
+  /* Opcional: para alinear verticalmente la imagen con el texto */
+  transform: translateY(6px);
+}
+
+/* --- CLASE DE UTILIDAD PARA IMÁGENES MÁS GRANDES --- */
+.image-full-height > img {
+    max-height: 85vh; /* Aumentamos el límite de 75vh a 85vh */
+    width: auto;      /* Dejamos que el ancho se ajuste solo */
+}
