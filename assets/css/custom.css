@@ -228,8 +228,8 @@
 /* --- ESTILOS PARA LISTA CON VIÑETA DE IMAGEN (Lámina 6) --- */
 
 /* 1. Preparamos la lista */
-.lista-objetivos {
-  list-style-type: none; /* Ocultamos la viñeta circular por defecto */
+.reveal .lista-objetivos { /* <--- CAMBIO AQUÍ */
+  list-style-type: none !important; /* El !important asegura que esta regla gane */
   padding-left: 0;       /* Eliminamos el espacio que deja la viñeta original */
   text-align: left;      /* Aseguramos que el texto esté alineado a la izquierda */
   margin-top: 80px;
@@ -237,7 +237,7 @@
 }
 
 /* 2. Creamos la nueva viñeta con tu imagen */
-.lista-objetivos li::before {
+.reveal .lista-objetivos li::before { /* <--- CAMBIO AQUÍ */
   content: ''; /* Obligatorio para que el pseudo-elemento aparezca */
   display: inline-block; /* Permite que el elemento tenga dimensiones */
 
