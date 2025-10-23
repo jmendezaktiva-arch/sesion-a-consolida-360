@@ -13,7 +13,7 @@ const slideContent = [
   
   // Lámina 2: Nuestra Esencia (dos columnas, imagen a la izquierda)
   {
-    layout: 'layout-two-columns',
+    layout: 'layout-default',
     title: 'Mi Empresa Crece: Nuestra Esencia',
     subtitle: 'NUESTRA MISIÓN: TU TRANSFORMACIÓN',
     image: {
