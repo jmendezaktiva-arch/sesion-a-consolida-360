@@ -149,6 +149,8 @@ const slideContent = [
   {
     layout: 'layout-center-focus',
     title: 'Gracias. El Viaje Continúa.',
-    content: `<p>Gracias por participar en nuestra sesión sobre gestión del talento.</p><h3 class="contact-heading">¡No te quedes con dudas! Contáctanos para más información.</h3><p>Jorge Méndez, especialista en implementación de estrategias efectivas.</p>`
+    image: {
+      src: 'assets/images/slide-19.png'
   }
+}
 ];
