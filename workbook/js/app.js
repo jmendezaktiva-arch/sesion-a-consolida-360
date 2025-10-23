@@ -765,44 +765,59 @@ for (let i = 1; i <= 2; i++) {
         if (roleplayTableBody) roleplayTableBody.appendChild(row);
     });
 
-    // --- EXPORTAR A PDF ---
-    document.getElementById('export-pdf').addEventListener('click', function() {
-        const { jsPDF } = window.jspdf;
-        const content = document.getElementById('main-content');
-        const loadingIndicator = document.getElementById('loading');
-        loadingIndicator.style.display = 'block';
+// --- EXPORTAR A PDF ---
+document.getElementById('export-pdf').addEventListener('click', function() {
+    // 1. Asegurarnos que la data del reporte está actualizada antes de exportar
+    if(typeof populateFinalReport === 'function') {
+        populateFinalReport();
+    }
+
+    const { jsPDF } = window.jspdf;
+    
+    // 2. Apuntamos DIRECTAMENTE al elemento que queremos exportar
+    const content = document.getElementById('reporte'); 
+    
+    if (!content) {
+        alert('La sección del reporte final no se encontró.');
+        return;
+    }
+
+    const loadingIndicator = document.getElementById('loading');
+    loadingIndicator.style.display = 'block';
+    
+    // 3. Ya no necesitamos mostrar/ocultar secciones, el proceso es más limpio
+    html2canvas(content, { scale: 2, useCORS: true }).then(canvas => {
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF('p', 'mm', 'a4');
+        const pdfWidth = pdf.internal.pageSize.getWidth();
+        const imgWidth = canvas.width;
+        const imgHeight = canvas.height;
+        const ratio = imgWidth / imgHeight;
+        const pdfImageHeight = pdfWidth / ratio;
+        let heightLeft = pdfImageHeight;
+        let position = 0;
+
+        pdf.addImage(imgData, 'PNG', 10, 10, pdfWidth - 20, pdfImageHeight - 20); // Añadimos un pequeño margen
+        heightLeft -= (pdf.internal.pageSize.getHeight() - 20);
+
+        while (heightLeft > 0) {
+            position = heightLeft - (pdfImageHeight - 20);
+            pdf.addPage();
+            pdf.addImage(imgData, 'PNG', 10, position, pdfWidth - 20, pdfImageHeight - 20);
+            heightLeft -= (pdf.internal.pageSize.getHeight() - 20);
+        }
+
+        // Renombramos el archivo para reflejar su contenido
+        const participantName = localStorage.getItem('cuaderno_nombre_participante') || 'participante';
+        pdf.save(`Reporte_Final_${participantName}.pdf`);
         
-        const currentHash = window.location.hash || `#${sectionsData[0].id}`;
-        sections.forEach(s => s.classList.add('active')); 
-        
-        html2canvas(content, { scale: 2, useCORS: true }).then(canvas => {
-            showSection(currentHash); 
-            const imgData = canvas.toDataURL('image/png');
-            const pdf = new jsPDF('p', 'mm', 'a4');
-            const pdfWidth = pdf.internal.pageSize.getWidth();
-            const imgWidth = canvas.width;
-            const imgHeight = canvas.height;
-            const ratio = imgWidth / imgHeight;
-            const pdfImageHeight = pdfWidth / ratio;
-            let heightLeft = pdfImageHeight;
-            let position = 0;
-            pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfImageHeight);
-            heightLeft -= pdf.internal.pageSize.getHeight();
-            while (heightLeft > 0) {
-                position = heightLeft - pdfImageHeight;
-                pdf.addPage();
-                pdf.addImage(imgData, 'PNG', 0, position, pdfWidth, pdfImageHeight);
-                heightLeft -= pdf.internal.pageSize.getHeight();
-            }
-            const participantName = localStorage.getItem('cuaderno_nombre_participante') || 'participante';
-            pdf.save(`Cuaderno_MiEmpresaCrece_${participantName}.pdf`);
-            loadingIndicator.style.display = 'none';
-        }).catch(err => {
-            console.error("Error al generar el PDF:", err);
-            loadingIndicator.style.display = 'none';
-            showSection(currentHash);
-        });
+        loadingIndicator.style.display = 'none';
+
+    }).catch(err => {
+        console.error("Error al generar el PDF:", err);
+        loadingIndicator.style.display = 'none';
     });
+});
 
     // --- INICIALIZACIÓN FINAL ---
     const initialHash = window.location.hash || `#${sectionsData[0].id}`;
