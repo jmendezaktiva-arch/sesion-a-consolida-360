@@ -130,8 +130,6 @@ const slideContent = [
     layout: 'layout-center-focus',
     title: 'Reflexión',
     subtitle: 'Menos es Más, Más Resultados',
-    content: `<blockquote>"Cuando el equipo entiende lo que hay que lograr, el crecimiento empieza a depender de cuánto Propósito encuentra el equipo en lo que hacen."</blockquote><p>- Anónimo</p>`,
-    background: '#F4F4F4',
         image: {
       src: 'assets/images/slide-17.png'
     }
