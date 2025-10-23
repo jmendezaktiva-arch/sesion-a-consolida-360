@@ -70,7 +70,7 @@ const slideContent = [
 
   // Lámina 7: Líder orquesta
   {
-    layout: 'layout-split',
+    layout: 'layout-two-columns',
     title: 'Líder Orquesta vs Líder que Crea Líderes: Si sientes que tu día a día es apagar fuegos... estás en el lugar correcto.', 
     content: `
           <p>Liderazgo</p>
