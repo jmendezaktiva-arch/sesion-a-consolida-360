@@ -58,7 +58,7 @@ const slideContent = [
     title: 'Objetivos de Transformación',
         content: `
       <p>Estrategias para Fortalecer la Responsabilidad, la Delegación y la Retroalimentación en tu equipo.</p>
-      <ul>
+      <ul class="lista-objetivos">
         <li>Diagnosticar el nivel de 'ownership'.</li>
         <li>Conectar cada rol con el propósito estratégico.</li>
         <li>Rediseñar el tramo de control.</li>
@@ -67,11 +67,6 @@ const slideContent = [
         <li>Usar Feedback 360° para consolidar personal clave.</li>
       </ul>
     `,
-// --- MODIFICACIÓN: Corregido para usar la imagen correspondiente a la diapositiva ---
-    image: {
-      src: 'assets/images/slide-6.png',
-      alt: 'Iconos representando los objetivos de la sesión'
-    }
   },
 
   // Lámina 7: Líder orquesta
