@@ -88,13 +88,13 @@ const slideContent = [
       <div class="content-wrapper">
         
         <div>
-          <p>Liderazgo</p>
+          <p><strong>Liderazgo</strong></p>
           <ul style="text-align: left; margin-top: 20px;">
             <li>Soy el cuello de botella en las decisiones.</li>
             <li>Mi equipo no toma la iniciativa.</li>
             <li>Hago de todo.</li>
           </ul>
-          <p>Contruyendo los cimientos</p>
+          <p><strong>Contruyendo los cimientos</strong></p>
           <ul style="text-align: left; margin-top: 20px;">
             <li>Identificar si eres un "líder orquesta" que centraliza todo.</li>
             <li>Reconocer los síntomas: ser el cuello de botella, falta de iniciativa del equipo, hacer de todo.</li>
