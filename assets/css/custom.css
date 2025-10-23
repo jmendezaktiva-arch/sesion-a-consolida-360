@@ -254,3 +254,9 @@
   /* Opcional: para alinear verticalmente la imagen con el texto */
   transform: translateY(6px);
 }
+
+/* --- CLASE DE UTILIDAD PARA IMÁGENES MÁS GRANDES (CORREGIDA) --- */
+.reveal .slides section.image-full-height > img { /* <--- CAMBIO CLAVE AQUÍ */
+    max-height: 85vh !important; /* Aumentamos el límite y aseguramos que gane */
+    width: auto;
+}
