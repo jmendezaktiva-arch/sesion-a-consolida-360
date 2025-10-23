@@ -260,3 +260,8 @@
     max-height: 85vh !important; /* Aumentamos el límite y aseguramos que gane */
     width: auto;
 }
+
+/* --- AJUSTE VERTICAL PARA LA IMAGEN DE LA LÁMINA 5 --- */
+.slide-5-custom > img {
+    margin-top: 50px; /* <-- Aumenta este valor para bajar más la imagen */
+}
