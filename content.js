@@ -140,7 +140,7 @@ const slideContent = [
   {
     layout: 'layout-center-focus',
     title: 'De tu Plan a tu Legado',
-    subtitle: 'Has diseñado el mapa. Ahora comienza el verdadero viaje.',
+    subtitle: 'Has diseñado el mapa, ahora comienza el verdadero viaje.',
     content: `
       <div class="highlight-quote" style="font-size: 1.1em; margin-top: 40px; text-align: center;">
         <p>Los ejercicios que completaste no son solo tareas; son los parámetros para sembrar la <strong>semilla de la empresa que quieres construir</strong>: una organización con <strong>propósito</strong>, donde cada miembro del equipo crece y los resultados son sostenibles.</p>
