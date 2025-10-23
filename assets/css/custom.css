@@ -51,7 +51,7 @@
     display: block;
     margin: 15px auto 0 auto;
     width: 100%;
-    max-height: 50vh; /* <-- AÑADIMOS ESTA LÍNEA */
+    max-height: 65vh; /* <-- AÑADIMOS ESTA LÍNEA */
 }
 
 /* --- PLANTILLAS BÁSICAS (ASIGNADAS EN content.js) --- */
