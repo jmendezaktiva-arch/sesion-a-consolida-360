@@ -1,18 +1,18 @@
-// Archivo de Contenido para la Presentación: Sesión A (Versión Limpia)
+// Archivo de Contenido para la Presentación: Sesión A
 
 const slideContent = [
-  // Diapositiva 1: Portada
+  // Lámina 1: Portada
   {
     layout: 'layout-default',
-    title: '¡Bienvenidos a Consolidación 360°!', 
-    subtitle: 'EMPRESA EXITOSA: DE TAREAS A RESULTADOS', 
+    title: '¡Bienvenidos a Consolida 360°!',
+    subtitle: 'Empresa Exitosa: de Tareas a Resultados',
     content: '<div><h3>Transformando PYMES en Empresas Exitosas y Sostenibles</h3></div>', 
     image: 'assets/images/slide-1.png',
-    background: '#FFFFFF' 
+      alt: 'Portada de Bienvenida a Consolida 360°'
   },
   
-  // Diapositiva 2: Nuestra Misión
-   {
+  // Lámina 2: Nuestra Esencia (dos columnas, imagen a la izquierda)
+  {
     layout: 'layout-two-columns',
     title: 'Mi Empresa Crece: Nuestra Esencia',
     subtitle: 'NUESTRA MISIÓN: TU TRANSFORMACIÓN',
@@ -22,7 +22,7 @@ const slideContent = [
     }
   },
 
-  // Diapositiva 3: Tu Programa de Transformación 
+  // Lámina 3: Programa de Transformación
   {
     layout: 'layout-infographic',
     title: 'Tu Programa de Transformación',
@@ -32,7 +32,7 @@ const slideContent = [
     }
   },
 
-  // Diapositiva 4: Sus Guías
+  // Lámina 4: Sus Guías
   {
     layout: 'layout-center-focus',
     title: 'Sus Guías en este Viaje',
@@ -42,7 +42,7 @@ const slideContent = [
     }
   },
 
-  // Diapositiva 5: Reglas del Juego
+  // Lámina 5: Reglas del Juego
   {
     layout: 'layout-default slide-5-custom',
     title: 'Reglas del Juego y Dinámica',
@@ -52,11 +52,11 @@ const slideContent = [
     }
   },
 
-  // Diapositiva 6: Objetivos de Transformación
+  // Lámina 6: Objetivos de Transformación
   {
-    layout: 'layout-split',
-    title: 'OBJETIVOS DE TRANSFORMACIÓN',
-    content: `
+    layout: 'layout-two-columns',
+    title: 'Objetivos de Transformación',
+        content: `
       <p>Estrategias para Fortalecer la Responsabilidad, la Delegación y la Retroalimentación en tu equipo.</p>
       <ul>
         <li>Diagnosticar el nivel de 'ownership'.</li>
@@ -68,45 +68,56 @@ const slideContent = [
       </ul>
     `,
 // --- MODIFICACIÓN: Corregido para usar la imagen correspondiente a la diapositiva ---
-    image: 'assets/images/slide-6.png',
+    image: {
+      src: 'assets/images/slide-6.png',
+      alt: 'Iconos representando los objetivos de la sesión'
+    }
   },
 
-  // Diapositiva 7: Líder orquesta
+  // Lámina 7: Líder orquesta
   {
-    layout: 'layout-split',
-    title: 'LÍDER ORQUESTA VS LÍDER QUE CREA LÍDERES: Si sientes que tu día a día es apagar fuegos... estás en el lugar correcto.', 
+    layout: 'layout-center-focus',
+    title: 'Líder Orquesta vs Líder que Crea Líderes: Si sientes que tu día a día es apagar fuegos... estás en el lugar correcto.', 
     content: `
-          <p>LIDERAZGO</p>
+          <p>Liderazgo</p>
       <ul>
         <li>Soy el cuello de botella en las decisiones.</li>
         <li>Mi equipo no toma la iniciativa</li>
         <li>Hago de todo</li>
       </ul>
     `,
-        image: 'assets/images/slide-8.png',
+    image: {
+      src: 'assets/images/slide-8.png',
+      alt: 'Infografía del mapa de conceptos clave'
+    }
   },
 
-  // Diapositiva 8: Conceptos Clave
+  // Lámina 8: Conceptos Clave
   {
     layout: 'layout-center-focus',
-    title: 'CONCEPTO CLAVE DEL PROGRAMA', 
-    image: 'assets/images/slide-7.png',
+    title: 'Concepto Clave del Programa',
+    image: {
+      src: 'assets/images/slide-7.png',
+      alt: 'Diagrama del ecosistema de ventas digitales'
+    },
     content: 'Gestión efectiva del personal, Ownership, Tramo de control, Delegación, Feedback 360 y más.'
   },
-
-  // Diapositiva 9: La Hoja de Ruta
+ 
+  // Lámina 9: La Hoja de Ruta
   {
     layout: 'layout-center-focus',
-    title: 'LA HOJA DE RUTA HACIA LA CONSOLIDACIÓN', 
-    image: 'assets/images/slide-8.0.png'
+    title: 'La Hoja de Ruta Hacia la Consilidación', 
+    image: {
+      src: 'assets/images/slide-8.0.png',
+      alt: 'Diagrama de flujo de la ruta de implementación'
+    }
   },
- 
-  // --- SERIE DE EJERCICIOS ---
-  // ... (Modificado)
+
+// --- SERIE DE EJERCICIOS (MODIFICADO) ---
   {
     layout: 'layout-center-focus',
     title: 'Plan de implementación',
-    subtitle: 'Diagnosticando tu Ecosistema Digital',
+    subtitle: 'Empresa Exitosa: de Tareas a Resultados',
     workbookLink: {
         url: '../workbook/index.html#diagnostico',
         text: 'Abrir Plan de Implementación'
@@ -116,12 +127,32 @@ const slideContent = [
   // Diapositiva de Cierre: Reflexión
   {
     layout: 'layout-center-focus',
-    title: 'REFLEXIÓN',
+    title: 'Reflexión',
+    subtitle: 'Menos es Más, Más Resultados',
     content: `<blockquote>"Cuando el equipo entiende lo que hay que lograr, el crecimiento empieza a depender de cuánto Propósito encuentra el equipo en lo que hacen."</blockquote><p>- Anónimo</p>`,
-    background: '#F4F4F4'
+    background: '#F4F4F4',
+        image: {
+      src: 'assets/images/slide-17.png'
+    }
   },
   
-  // Diapositiva Final: Contacto
+  // Lámina 18: Tareas
+  {
+    layout: 'layout-center-focus',
+    title: 'Tareas Asignadas y Siguientes Pasos',
+    subtitle: 'Tu compromiso con la acción',
+        content: `
+      <p>Asegura una implementación <strong>exitosa</strong>.</p>
+      <ul>
+        <li>Da seguimiento a las sesiones semanales con tus colaboradores.</li>
+        <li>Configura tu ecosistema digital.</li>
+        <li>No faltes a la próxima sesión.</li>
+        <li>Programa tu reunión individual con el equipo de consultoría.</li>
+      </ul>
+    `, 
+  },
+
+// Diapositiva Final: Contacto
   {
     layout: 'layout-center-focus',
     title: 'Gracias. El Viaje Continúa.',
