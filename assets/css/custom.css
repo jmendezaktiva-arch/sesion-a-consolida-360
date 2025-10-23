@@ -232,7 +232,8 @@
   list-style-type: none; /* Ocultamos la viñeta circular por defecto */
   padding-left: 0;       /* Eliminamos el espacio que deja la viñeta original */
   text-align: left;      /* Aseguramos que el texto esté alineado a la izquierda */
-  margin-top: 20px;
+  margin-top: 80px;
+  font-size: 1.1em; /* Prueba valores como 1.1em o 28px */
 }
 
 /* 2. Creamos la nueva viñeta con tu imagen */
@@ -246,10 +247,10 @@
   background-repeat: no-repeat;
   
   /* --- Ajusta el tamaño y la posición de la viñeta --- */
-  width: 22px;          /* Ancho de tu viñeta */
-  height: 22px;         /* Alto de tu viñeta */
-  margin-right: 12px;   /* Espacio entre la viñeta y el texto */
+  width: 28px;          /* Ancho de tu viñeta */
+  height: 28px;         /* Alto de tu viñeta */
+  margin-right: 15px;   /* Espacio entre la viñeta y el texto */
 
   /* Opcional: para alinear verticalmente la imagen con el texto */
-  transform: translateY(5px);
+  transform: translateY(6px);
 }
