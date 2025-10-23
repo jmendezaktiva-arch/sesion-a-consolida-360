@@ -70,7 +70,7 @@ const slideContent = [
 
   // Lámina 7: Líder orquesta
   {
-    layout: 'layout-two-columns',
+    layout: 'layout-split',
     title: 'Líder Orquesta vs Líder que Crea Líderes: Si sientes que tu día a día es apagar fuegos... estás en el lugar correcto.', 
     content: `
           <p>Liderazgo</p>
@@ -92,14 +92,13 @@ const slideContent = [
     title: 'Concepto Clave del Programa',
     image: {
       src: 'assets/images/slide-7.png',
-      alt: 'Diagrama del ecosistema de ventas digitales'
+      alt: 'Diagrama de conceptos clave'
     },
-    content: 'Gestión efectiva del personal, Ownership, Tramo de control, Delegación, Feedback 360 y más.'
   },
  
   // Lámina 9: La Hoja de Ruta
   {
-    layout: 'layout-center-focus',
+    layout: 'layout-center-focus image-full-height',
     title: 'La Hoja de Ruta Hacia la Consilidación', 
     image: {
       src: 'assets/images/slide-8.0.png',
