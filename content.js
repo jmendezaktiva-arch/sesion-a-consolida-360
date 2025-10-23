@@ -94,9 +94,6 @@ const slideContent = [
             <li>Mi equipo no toma la iniciativa.</li>
             <li>Hago de todo.</li>
           </ul>
-        </div>
-
-        <div>
           <p>Contruyendo los cimientos</p>
           <ul style="text-align: left; margin-top: 20px;">
             <li>Identificar si eres un "líder orquesta" que centraliza todo.</li>
