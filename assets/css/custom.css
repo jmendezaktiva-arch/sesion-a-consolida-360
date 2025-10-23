@@ -255,13 +255,11 @@
   transform: translateY(6px);
 }
 
-/* --- CLASE DE UTILIDAD PARA IMÁGENES MÁS GRANDES (CORREGIDA) --- */
-.reveal .slides section.image-full-height > img { /* <--- CAMBIO CLAVE AQUÍ */
-    max-height: 85vh !important; /* Aumentamos el límite y aseguramos que gane */
-    width: auto;
-}
+/* Archivo: custom.css */
 
-/* --- AJUSTE VERTICAL PARA LA IMAGEN DE LA LÁMINA 5 --- */
-.slide-5-custom > img {
-    margin-top: 80px; /* <-- Aumenta este valor para bajar más la imagen */
+/* --- AJUSTE PARA IMAGEN DENTRO DE LAYOUT DIVIDIDO --- */
+.layout-split .content-wrapper img {
+    width: 100%;
+    max-height: 55vh; /* Ajusta la altura máxima de la imagen */
+    object-fit: contain;
 }
