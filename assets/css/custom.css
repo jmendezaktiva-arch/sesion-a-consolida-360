@@ -263,5 +263,5 @@
 
 /* --- AJUSTE VERTICAL PARA LA IMAGEN DE LA LÁMINA 5 --- */
 .slide-5-custom > img {
-    margin-top: 50px; /* <-- Aumenta este valor para bajar más la imagen */
+    margin-top: 80px; /* <-- Aumenta este valor para bajar más la imagen */
 }
