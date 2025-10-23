@@ -1,6 +1,17 @@
 // Archivo de Contenido para la Presentación: Sesión A
 
 const slideContent = [
+  
+  // Lámina de Inicio: Recepción (2 Min)
+  {
+    layout: 'layout-center-focus',
+    title: 'Equipo Proactivo, Empresa Exitosa: De Tareas a Resultados',
+    image: {
+      src: 'assets/images/slide-2.1.png', // Usando el logo que ya tienes
+      alt: 'Logo de Mi Empresa Crece'
+    }
+  },
+  
   // Lámina 1: Portada
   {
     layout: 'layout-default',
@@ -125,6 +136,22 @@ const slideContent = [
     }
   },
 
+  // Diapositiva de CTA: Compromiso con liderazgo u equipo
+  {
+    layout: 'layout-center-focus',
+    title: 'De tu Plan a tu Legado',
+    subtitle: 'Has diseñado el mapa. Ahora comienza el verdadero viaje.',
+    content: `
+      <div class="highlight-quote" style="font-size: 1.1em; margin-top: 40px; text-align: center;">
+        <p>Los ejercicios que completaste no son solo tareas; son los parámetros para sembrar la <strong>semilla de la empresa que quieres construir</strong>: una organización con <strong>propósito</strong>, donde cada miembro del equipo crece y los resultados son sostenibles.</p>
+        <p>El cambio real ocurre cuando este plan cobra vida a través de tu <strong>liderazgo</strong>.</p>
+      </div>
+    `,
+            image: {
+      src: 'assets/images/slide-11.png'
+    }
+    },
+
   // Diapositiva de Cierre: Reflexión
   {
     layout: 'layout-center-focus',
@@ -158,5 +185,16 @@ const slideContent = [
     image: {
       src: 'assets/images/slide-19.png'
   }
-}
+},
+
+  {
+    layout: 'layout-center-focus',
+    title: 'Equipo Proactivo, Empresa Exitosa: De Tareas a Resultados',
+    subtitle: 'Gracias por su compromiso.',
+    image: {
+      src: 'assets/images/slide-2.1.png', // Mismo logo para consistencia
+      alt: 'Logo de Mi Empresa Crece'
+    }
+  }
+
 ];
