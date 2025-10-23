@@ -97,6 +97,15 @@ const slideContent = [
         </div>
 
         <div>
+          <p>Contruyendo los cimientos</p>
+          <ul style="text-align: left; margin-top: 20px;">
+            <li>Identificar si eres un "líder orquesta" que centraliza todo.</li>
+            <li>Reconocer los síntomas: ser el cuello de botella, falta de iniciativa del equipo, hacer de todo.</li>
+            <li>El objetivo es pasar a ser un "líder que crea líderes".</li>
+          </ul>
+        </div>
+
+        <div>
           <img src="assets/images/slide-8.png" alt="Persona de negocios multifacética">
         </div>
 
