@@ -142,7 +142,7 @@ const slideContent = [
     subtitle: 'Tu compromiso con la acción',
         content: `
       <p>Asegura una implementación <strong>exitosa</strong>.</p>
-      <ul>
+      <ul class="lista-objetivos">
         <li>Da seguimiento a las sesiones semanales con tus colaboradores.</li>
         <li>Configura tu ecosistema digital.</li>
         <li>No faltes a la próxima sesión.</li>
