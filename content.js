@@ -69,21 +69,29 @@ const slideContent = [
   },
 
   // Lámina 7: Líder orquesta
-  {
-    layout: 'layout-two-columns',
-    title: 'Líder Orquesta vs Líder que Crea Líderes: Si sientes que tu día a día es apagar fuegos... estás en el lugar correcto.', 
+{
+    layout: 'layout-split', // Usamos la plantilla de dos columnas
+    title: 'Líder Orquesta vs Líder que Crea Líderes: Si sientes que tu día a día es apagar fuegos... estás en el lugar correcto.',
+    // Reestructuramos el contenido en dos columnas y movemos la imagen aquí dentro
     content: `
+      <div class="content-wrapper">
+        
+        <div>
           <p>Liderazgo</p>
-      <ul>
-        <li>Soy el cuello de botella en las decisiones.</li>
-        <li>Mi equipo no toma la iniciativa</li>
-        <li>Hago de todo</li>
-      </ul>
+          <ul style="text-align: left; margin-top: 20px;">
+            <li>Soy el cuello de botella en las decisiones.</li>
+            <li>Mi equipo no toma la iniciativa.</li>
+            <li>Hago de todo.</li>
+          </ul>
+        </div>
+
+        <div>
+          <img src="assets/images/slide-8.png" alt="Persona de negocios multifacética">
+        </div>
+
+      </div>
     `,
-    image: {
-      src: 'assets/images/slide-8.png',
-      alt: 'Infografía del mapa de conceptos clave'
-    }
+    // IMPORTANTE: Eliminamos la propiedad 'image' de aquí para que no se duplique
   },
 
   // Lámina 8: Conceptos Clave
