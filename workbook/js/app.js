@@ -10,10 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 'delegacion', title: '5. Delegación Efectiva', icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h.01M12 7h.01M16 7h.01M9 17h6M9 14h6M9 11h6M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>` },
         { id: 'feedback', title: '6. Feedback Ágil', icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2V7a2 2 0 012-2h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 01.293.707V8z" /></svg>` },
         { id: 'roleplay', title: '7. Role-Play', icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>` },
-        { id: 'plan', title: '8. Mi Plan de Implementación', icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>` },
-        { id: 'resumen', title: '9. Resumen Ejecutivo', icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>` },
-        // ... (objeto de la sección 9)
-        { id: 'reporte', title: '10. Reporte Final', icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" /></svg>` }
+// ... (línea del plan de implementación)
+        { id: 'plan', title: '8. Mi Plan de Implementación', icon: `<svg ... </svg>` },
+        { id: 'reporte', title: '9. Reporte Final', icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" /></svg>` }
     ];
 
 // --- CÓDIGO A REEMPLAZAR EN app.js ---
@@ -295,47 +294,8 @@ sectionsData.forEach(data => {
             </div>
         </div>`;
     
-    document.getElementById('resumen').innerHTML = `
-        <h2 class="text-3xl font-bold brand-orange mb-4 flex items-center gap-3">${sectionsData[8].icon} ${sectionsData[8].title.substring(3)}</h2>
-        <div class="${instructionsBoxClass}">
-            <p><strong>Objetivo:</strong> Consolidar en un solo lugar los diagnósticos y planes de acción más importantes que has definido a lo largo de este cuaderno de trabajo.</p>
-            <p class="mt-2"><strong>Dashboard de Liderazgo:</strong> Este es tu plan de acción personal. Se actualiza automáticamente a medida que completas las otras secciones.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-            <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                <h3 class="font-bold text-lg text-brand-blue">Mayor Cuello de Botella</h3>
-                <p class="text-xs text-gray-500 mb-3">Fuente: Sec. 1 - Dependencia Operativa</p>
-                <p id="summary_cuello_botella" class="text-gray-700 font-serif italic bg-white p-3 rounded h-24">---</p>
-            </div>
-            <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                <h3 class="font-bold text-lg text-brand-blue">Problema Más Recurrente</h3>
-                <p class="text-xs text-gray-500 mb-3">Fuente: Sec. 2 - Vocación Puestos Clave</p>
-                <p id="summary_problema_recurrente" class="text-gray-700 font-serif italic bg-white p-3 rounded h-24">---</p>
-            </div>
-            
-            <div class="md:col-span-2 bg-blue-50 p-6 rounded-lg shadow-md border-l-4 border-brand-blue">
-                <h3 class="font-bold text-xl text-brand-blue">Plan de Acción para: <span id="summary_puesto1_titulo" class="text-brand-orange">Puesto Clave 1</span></h3>
-                <p class="text-xs text-gray-500 mb-3">Fuente: Sec. 8 - Mi Plan de Implementación</p>
-                <div id="summary_accion_prioritaria_p1" class="text-gray-800 font-serif text-lg italic bg-white p-4 rounded mb-4">---</div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <p class="text-gray-700 bg-white p-3 rounded"><strong class="font-semibold">Fecha Límite:</strong> <span id="summary_fecha_limite_p1">---</span></p>
-                    <p class="text-gray-700 bg-white p-3 rounded"><strong class="font-semibold">Obstáculo:</strong> <span id="summary_obstaculo_p1">---</span></p>
-                </div>
-            </div>
-
-             <div class="md:col-span-2 bg-blue-50 p-6 rounded-lg shadow-md border-l-4 border-brand-blue">
-                <h3 class="font-bold text-xl text-brand-blue">Plan de Acción para: <span id="summary_puesto2_titulo" class="text-brand-orange">Puesto Clave 2</span></h3>
-                <p class="text-xs text-gray-500 mb-3">Fuente: Sec. 8 - Mi Plan de Implementación</p>
-                <div id="summary_accion_prioritaria_p2" class="text-gray-800 font-serif text-lg italic bg-white p-4 rounded mb-4">---</div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <p class="text-gray-700 bg-white p-3 rounded"><strong class="font-semibold">Fecha Límite:</strong> <span id="summary_fecha_limite_p2">---</span></p>
-                    <p class="text-gray-700 bg-white p-3 rounded"><strong class="font-semibold">Obstáculo:</strong> <span id="summary_obstaculo_p2">---</span></p>
-                </div>
-            </div>
-        </div>`;
-
         document.getElementById('reporte').innerHTML = `
-    <h2 class="text-3xl font-bold brand-orange mb-4 flex items-center gap-3">${sectionsData[9].icon} ${sectionsData[9].title.substring(4)}</h2>
+    <h2 class="text-3xl font-bold brand-orange mb-4 flex items-center gap-3">${sectionsData[8].icon} ${sectionsData[8].title.substring(3)}</h2>
     <div class="${instructionsBoxClass}">
         <p><strong>Objetivo:</strong> Consolidar los diagnósticos, definiciones estratégicas y compromisos clave de todo el cuaderno en un único plan de trabajo listo para ser implementado.</p>
         <p class="mt-2"><strong>Instrucción:</strong> Este reporte se ha generado automáticamente con tus respuestas. Revísalo y úsalo como tu guía de liderazgo para las próximas semanas.</p>
@@ -410,9 +370,6 @@ sectionsData.forEach(data => {
             link.classList.toggle('active', link.getAttribute('href') === hash);
         });
         
-        if (hash === '#resumen') {
-            populateExecutiveSummary();
-        }
         if (hash === '#reporte') { // <-- AÑADIR ESTO
             populateFinalReport();
         }
@@ -479,7 +436,6 @@ sectionsData.forEach(data => {
         });
         updateDelegacionTotals();
         checkCompletion();
-        populateExecutiveSummary();
         populateFinalReport(); // <-- AÑADIR ESTO
         updatePlanTitles();
     }
@@ -496,7 +452,6 @@ sectionsData.forEach(data => {
                 updatePlanTitles();
             }
             checkCompletion();
-            populateExecutiveSummary();
             populateFinalReport(); // <-- AÑADIR ESTO
             }
     });
@@ -511,38 +466,6 @@ sectionsData.forEach(data => {
             checkCompletion();
             }
     });
-    
-function populateExecutiveSummary() {
-        const placeholder = 'No definido aún.';
-        const dataMap = {
-            'summary_cuello_botella': 'cuaderno_evaluacion_reflexion',
-            'summary_problema_recurrente': 'cuaderno_vocacion_problema_recurrente',
-            // Plan 1
-            'summary_puesto1_titulo': 'cuaderno_vocacion_p1_titulo',
-            'summary_accion_prioritaria_p1': 'cuaderno_plan_accion_prioritaria_p1',
-            'summary_fecha_limite_p1': 'cuaderno_plan_fecha_limite_p1',
-            'summary_obstaculo_p1': 'cuaderno_plan_obstaculo_p1',
-            // Plan 2
-            'summary_puesto2_titulo': 'cuaderno_vocacion_p2_titulo',
-            'summary_accion_prioritaria_p2': 'cuaderno_plan_accion_prioritaria_p2',
-            'summary_fecha_limite_p2': 'cuaderno_plan_fecha_limite_p2',
-            'summary_obstaculo_p2': 'cuaderno_plan_obstaculo_p2',
-        };
-
-        for (const [elementId, storageKey] of Object.entries(dataMap)) {
-            const element = document.getElementById(elementId);
-            if (element) {
-                let value = localStorage.getItem(storageKey);
-                if ((storageKey === 'cuaderno_plan_fecha_limite_p1' || storageKey === 'cuaderno_plan_fecha_limite_p2') && value) {
-                    try {
-                        const date = new Date(value);
-                        value = date.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' }) + ' a las ' + date.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
-                    } catch(e) { }
-                }
-                element.textContent = (value && value.trim() !== '') ? value : placeholder;
-            }
-        }
-    } // <-- La función populateExecutiveSummary TERMINA AQUÍ.
 
     // CORRECTO: La función populateFinalReport se define AFUERA, al mismo nivel.
     function populateFinalReport() {
