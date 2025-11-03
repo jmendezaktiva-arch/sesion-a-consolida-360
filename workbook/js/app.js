@@ -469,6 +469,8 @@ const progress = (completedSections / sectionsData.length) * 100; // <-- LÍNEA 
         checkCompletion();
         // AÑADE ESTA LÍNEA:
         populatePlanDeImplementacion();
+        // AÑADE ESTA LÍNEA:
+        syncRoleNames();
     }
 
     mainContent.addEventListener('input', function(e) {
@@ -485,6 +487,7 @@ const progress = (completedSections / sectionsData.length) * 100; // <-- LÍNEA 
             const section = input.dataset.section;
             if (['vocacion', 'prioridades', 'mision', 'feedback'].includes(section)) {
                 populatePlanDeImplementacion();
+                syncRoleNames();
             }
             }
     });
@@ -502,6 +505,7 @@ const progress = (completedSections / sectionsData.length) * 100; // <-- LÍNEA 
             const section = input.dataset.section;
             if (['vocacion', 'prioridades', 'mision', 'feedback'].includes(section)) {
                 populatePlanDeImplementacion();
+                syncRoleNames();
             }
 
             }
@@ -572,6 +576,10 @@ for (let i = 1; i <= 2; i++) {
         const div = document.createElement('div');
         div.className = 'bg-gray-50 p-6 rounded-lg';
         div.innerHTML = `<h3 class="text-xl font-bold text-gray-800 mb-4">Análisis para Puesto Clave ${i}</h3>
+            <div class="mb-4 p-3 bg-blue-50 rounded-lg border border-brand-blue">
+            <label class="block font-semibold text-sm text-brand-blue">Puesto Clave (Importado de Ej. 2):</label>
+            <p id="prioridades_p${i}_titulo" class="text-lg font-bold text-gray-900"></p>
+            </div>
             <div class="space-y-4">
             <div><label class="block font-semibold text-gray-700">La Situación Inicial:</label><textarea class="autosave-input w-full mt-1 p-2 border rounded" data-section="prioridades" data-id="prioridades_c${i}_situacion" placeholder="Un cliente importante se quejó por un retraso en la entrega."></textarea></div>
             <div><label class="block font-semibold text-gray-700">Comportamiento / Decisión:</label><textarea class="autosave-input w-full mt-1 p-2 border rounded" data-section="prioridades" data-id="prioridades_c${i}_comportamiento" placeholder="El colaborador me reenvió el correo del cliente sin proponer una solución."></textarea></div>
@@ -742,6 +750,40 @@ for (let i = 1; i <= 2; i++) {
         setContent('plan_p4_p2_frecuencia', getRadio('mision_p2_plazo_revision'));
         setContent('plan_p4_proxima_sesion', getStorage('feedback_accion1_proxima_sesion'));
     }
+
+
+    // --- INICIO MODIFICACIÓN 2: Crear función de sincronización de nombres ---
+// UBICACIÓN: Añadir esta función después de 'populatePlanDeImplementacion()'
+
+    function syncRoleNames() {
+        const defaultText = 'No definido';
+        
+        // 1. Obtener los nombres de los roles de localStorage
+        const p1_titulo_val = localStorage.getItem('cuaderno_vocacion_p1_titulo');
+        const p2_titulo_val = localStorage.getItem('cuaderno_vocacion_p2_titulo');
+
+        const p1_titulo = p1_titulo_val || defaultText;
+        const p2_titulo = p2_titulo_val || defaultText;
+
+        // 2. Poblar Ej. 3 (Nuevos campos de display)
+        const prio_p1_titulo_el = document.getElementById('prioridades_p1_titulo');
+        if (prio_p1_titulo_el) prio_p1_titulo_el.textContent = p1_titulo;
+        
+        const prio_p2_titulo_el = document.getElementById('prioridades_p2_titulo');
+        if (prio_p2_titulo_el) prio_p2_titulo_el.textContent = p2_titulo;
+
+        // 3. Poblar Ej. 4 (Inputs existentes)
+        const mision_p1_rol = document.querySelector('[data-id="mision_p1_nombre_rol"]');
+        if (mision_p1_rol) mision_p1_rol.value = p1_titulo_val || ''; // Usamos val para no poner 'No definido'
+
+        const mision_p2_rol = document.querySelector('[data-id="mision_p2_nombre_rol"]');
+        if (mision_p2_rol) mision_p2_rol.value = p2_titulo_val || '';
+
+        // 4. Poblar Ej. 6 (Input existente - se usa Puesto 1 por defecto)
+        const feedback_rol = document.querySelector('[data-id="feedback_rol"]');
+        if (feedback_rol) feedback_rol.value = p1_titulo_val || '';
+    }
+// --- FIN MODIFICACIÓN 2 ---
 
 // --- FIN MODIFICACIÓN 2 ---
 
