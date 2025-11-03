@@ -245,6 +245,9 @@ sectionsData.forEach(data => {
         </table></div>
         <div class="mt-8"><h3 class="text-2xl font-bold text-gray-800">Mi Aprendizaje del Role-Play</h3><p class="text-gray-600 mt-2">¿Qué idea o estrategia te llevas de esta práctica que aplicarás en tu PYME?</p><textarea class="autosave-input w-full mt-2 p-3 border border-gray-300 rounded-lg h-32" data-section="roleplay" data-id="roleplay_aprendizaje" placeholder="Me di cuenta que tiendo a dar la solución en lugar de guiar con preguntas. Practicaré el hacer preguntas de control para asegurar el entendimiento."></textarea></div>`;
 
+// --- INICIO MODIFICACIÓN 1: Reemplazar HTML de Sección 8 (plan) ---
+// UBICACIÓN: Reemplaza el bloque 'document.getElementById('plan').innerHTML'
+
 document.getElementById('plan').innerHTML = `
     <h2 class="text-3xl font-bold brand-orange mb-4 flex items-center gap-3">${sectionsData[7].icon} ${sectionsData[7].title.substring(3)}</h2>
     <div class="${instructionsBoxClass}">
@@ -252,25 +255,137 @@ document.getElementById('plan').innerHTML = `
         <p class="mt-2"><strong>Indicaciones:</strong> Esta es tu hoja de ruta personal para la próxima semana. El objetivo es traducir el aprendizaje de hoy en acciones concretas que inicien la transformación. Un pequeño paso constante es mejor que un gran plan que no se ejecuta.</p>
     </div>
     <div class="space-y-8">
-        <div class="p-6 bg-blue-50 rounded-lg border-l-4 border-brand-blue"><h3 class="text-xl font-bold text-brand-blue">Paso 1: Seleccionar el Grupo Piloto (Día 1)</h3><p class="mt-2 text-gray-600">Elige a dos colaboradores clave con quienes iniciarás esta nueva metodología.</p><div class="mt-4 grid grid-cols-1 md-grid-cols-2 gap-4"><input type="text" placeholder="Colaborador Clave 1" class="autosave-input w-full p-2 border rounded" data-section="plan" data-id="plan_colaborador1"><input type="text" placeholder="Colaborador Clave 2" class="autosave-input w-full p-2 border rounded" data-section="plan" data-id="plan_colaborador2"></div></div>
-        <div class="p-6 bg-green-50 rounded-lg border-l-4 border-green-500"><h3 class="text-xl font-bold text-green-800">Paso 2: Redefinir un Rol Clave (Días 1-3)</h3><p class="mt-2 text-gray-600">Enfócate en uno de los colaboradores de tu grupo piloto. Utiliza las herramientas del taller para redefinir su puesto.</p><div class="mt-4 space-y-2">
-            <label><input type="checkbox" class="autosave-input" data-section="plan" data-id="plan_paso2_check1"> Completar la "Ficha de Rol Estratégico".</label>
-            <label><input type="checkbox" class="autosave-input" data-section="plan" data-id="plan_paso2_check2"> Revisar "Definición Vocación Puestos Clave".</label>
-            <label><input type="checkbox" class="autosave-input" data-section="plan" data-id="plan_paso2_check3"> Identificar "Prioridades de mejora".</label>
-            <label><input type="checkbox" class="autosave-input" data-section="plan" data-id="plan_paso2_check4"> Sintetizar en "Misión de puesto (Ficha Rol)".</label>
-        </div></div>
-        <div class="p-6 bg-yellow-50 rounded-lg border-l-4 border-yellow-500"><h3 class="text-xl font-bold text-yellow-800">Paso 3: Programar la Sesión de Alineación 1 a 1 (Días 4-5)</h3><p class="mt-2 text-gray-600">Agenda una reunión con tu colaborador para presentarle el nuevo enfoque de su puesto.</p><div class="mt-4 grid grid-cols-1 md-grid-cols-2 gap-4"><input type="text" placeholder="Colaborador Seleccionado" class="autosave-input w-full p-2 border rounded" data-section="plan" data-id="plan_sesion_colaborador"><input type="datetime-local" class="autosave-input w-full p-2 border rounded" data-section="plan" data-id="plan_sesion_fecha"></div></div>
-        <div class="p-6 bg-purple-50 rounded-lg border-l-4 border-purple-500"><h3 class="text-xl font-bold text-purple-800">Paso 4: Preparar y Agendar la Primera Sesión de Feedback (Días 6-7)</h3><p class="mt-2 text-gray-600">Con base en la Ficha de Rol, prepara la primera sesión de seguimiento.</p><div class="mt-4 grid grid-cols-1 md-grid-cols-2 gap-4"><input type="datetime-local" placeholder="Fecha y Hora Programada" class="autosave-input w-full p-2 border rounded" data-section="plan" data-id="plan_feedback_fecha"><input type="text" placeholder="Frecuencia acordada (Semanal, etc.)" class="autosave-input w-full p-2 border rounded" data-section="plan" data-id="plan_feedback_frecuencia"></div></div>
-        <div class="p-6 bg-red-50 rounded-lg border-l-4 border-red-500"><h3 class="text-xl font-bold text-red-800">Análisis de Obstáculos</h3>
+        <div class="p-6 bg-blue-50 rounded-lg border-l-4 border-brand-blue">
+            <h3 class="text-xl font-bold text-brand-blue">Paso 1: Seleccionar el Grupo Piloto (Día 1)</h3>
+            <p class="mt-2 text-gray-600">Estos son los dos colaboradores clave seleccionados en el Ejercicio 2:</p>
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-3 bg-white rounded-lg border">
+                    <label class="text-sm font-semibold text-gray-500">Puesto Clave 1:</label>
+                    <p id="plan_p1_nombre" class="text-lg font-bold text-gray-800"></p>
+                </div>
+                <div class="p-3 bg-white rounded-lg border">
+                    <label class="text-sm font-semibold text-gray-500">Puesto Clave 2:</label>
+                    <p id="plan_p2_nombre" class="text-lg font-bold text-gray-800"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-6 bg-green-50 rounded-lg border-l-4 border-green-500">
+            <h3 class="text-xl font-bold text-green-800">Paso 2: Redefinir un Rol Clave (Días 1-3)</h3>
+            <p class="mt-2 text-gray-600">Este es el resumen de la redefinición de roles de los Ejercicios 2, 3 y 4.</p>
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-4 bg-white rounded-lg border">
+                    <h4 class="text-lg font-bold text-gray-800 mb-2" id="plan_p2_p1_nombre">Puesto Clave 1</h4>
+                    
+                    <h5 class="font-semibold text-brand-blue mt-4">Datos del Ej. 4 (Misión de Puesto)</h5>
+                    <div class="text-sm space-y-2 mt-2 p-2 bg-gray-50 rounded">
+                        <p><strong>Responsabilidades:</strong> <span id="plan_p1_resp" class="text-gray-700 whitespace-pre-wrap"></span></p>
+                        <p><strong>Misión:</strong> <span id="plan_p1_mision" class="text-gray-700 whitespace-pre-wrap"></span></p>
+                        <p><strong>Prioridades:</strong> <span id="plan_p1_prior" class="text-gray-700 whitespace-pre-wrap"></span></p>
+                        <p><strong>Plazo Revisión:</strong> <span id="plan_p1_plazo" class="text-gray-700"></span></p>
+                    </div>
+
+                    <h5 class="font-semibold text-brand-blue mt-4">Datos del Ej. 2 (Vocación)</h5>
+                    <div class="text-sm space-y-2 mt-2 p-2 bg-gray-50 rounded">
+                        <p><strong>Funciones:</strong> <span id="plan_p1_func" class="text-gray-700 whitespace-pre-wrap"></span></p>
+                        <p><strong>Enfoque:</strong> <span id="plan_p1_enfoque" class="text-gray-700 whitespace-pre-wrap"></span></p>
+                    </div>
+                    
+                    <h5 class="font-semibold text-brand-blue mt-4">Datos del Ej. 3 (Prioridades)</h5>
+                    <div class="text-sm space-y-2 mt-2 p-2 bg-gray-50 rounded">
+                        <p><strong>Comportamiento:</strong> <span id="plan_p1_comp" class="text-gray-700 whitespace-pre-wrap"></span></p>
+                        <p><strong>Resultado:</strong> <span id="plan_p1_res" class="text-gray-700 whitespace-pre-wrap"></span></p>
+                        <p><strong>Ownership:</strong> <span id="plan_p1_owner" class="text-gray-700 whitespace-pre-wrap"></span></p>
+                    </div>
+                </div>
+                <div class="p-4 bg-white rounded-lg border">
+                    <h4 class="text-lg font-bold text-gray-800 mb-2" id="plan_p2_p2_nombre">Puesto Clave 2</h4>
+                    
+                    <h5 class="font-semibold text-brand-blue mt-4">Datos del Ej. 4 (Misión de Puesto)</h5>
+                    <div class="text-sm space-y-2 mt-2 p-2 bg-gray-50 rounded">
+                        <p><strong>Responsabilidades:</strong> <span id="plan_p2_resp" class="text-gray-700 whitespace-pre-wrap"></span></p>
+                        <p><strong>Misión:</strong> <span id="plan_p2_mision" class="text-gray-700 whitespace-pre-wrap"></span></p>
+                        <p><strong>Prioridades:</strong> <span id="plan_p2_prior" class="text-gray-700 whitespace-pre-wrap"></span></p>
+                        <p><strong>Plazo Revisión:</strong> <span id="plan_p2_plazo" class="text-gray-700"></span></p>
+                    </div>
+
+                    <h5 class="font-semibold text-brand-blue mt-4">Datos del Ej. 2 (Vocación)</h5>
+                    <div class="text-sm space-y-2 mt-2 p-2 bg-gray-50 rounded">
+                        <p><strong>Funciones:</strong> <span id="plan_p2_func" class="text-gray-700 whitespace-pre-wrap"></span></p>
+                        <p><strong>Enfoque:</strong> <span id="plan_p2_enfoque" class="text-gray-700 whitespace-pre-wrap"></span></p>
+                    </div>
+                    
+                    <h5 class="font-semibold text-brand-blue mt-4">Datos del Ej. 3 (Prioridades)</h5>
+                    <div class="text-sm space-y-2 mt-2 p-2 bg-gray-50 rounded">
+                        <p><strong>Comportamiento:</strong> <span id="plan_p2_comp" class="text-gray-700 whitespace-pre-wrap"></span></p>
+                        <p><strong>Resultado:</strong> <span id="plan_p2_res" class="text-gray-700 whitespace-pre-wrap"></span></p>
+                        <p><strong>Ownership:</strong> <span id="plan_p2_owner" class="text-gray-700 whitespace-pre-wrap"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6 p-4 bg-white rounded-lg border">
+                <h5 class="font-semibold text-brand-blue">Reflexión Compartida (Del Ej. 3)</h5>
+                <p id="plan_s3_reflexion" class="text-gray-700 text-sm mt-2 p-2 bg-gray-50 rounded whitespace-pre-wrap"></p>
+            </div>
+        </div>
+
+        <div class="p-6 bg-yellow-50 rounded-lg border-l-4 border-yellow-500">
+            <h3 class="text-xl font-bold text-yellow-800">Paso 3: Programar la Sesión de Alineación 1 a 1 (Días 4-5)</h3>
+            <p class="mt-2 text-gray-600">Presenta el nuevo enfoque a tus colaboradores (del Ej. 2) en la fecha de retroalimentación (del Ej. 6).</p>
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="p-3 bg-white rounded-lg border">
+                    <label class="text-sm font-semibold text-gray-500">Colaborador 1:</label>
+                    <p id="plan_p3_p1_nombre" class="text-lg font-bold text-gray-800"></p>
+                </div>
+                <div class="p-3 bg-white rounded-lg border">
+                    <label class="text-sm font-semibold text-gray-500">Colaborador 2:</label>
+                    <p id="plan_p3_p2_nombre" class="text-lg font-bold text-gray-800"></p>
+                </div>
+                <div class="p-3 bg-white rounded-lg border">
+                    <label class="text-sm font-semibold text-gray-500">Fecha de Sesión (Ej. 6):</label>
+                    <p id="plan_p3_fecha_retro" class="text-lg font-bold text-gray-800"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-6 bg-purple-50 rounded-lg border-l-4 border-purple-500">
+            <h3 class="text-xl font-bold text-purple-800">Paso 4: Preparar y Agendar la Primera Sesión de Feedback (Días 6-7)</h3>
+            <p class="mt-2 text-gray-600">Datos importados de los Ej. 2, 4 y 6.</p>
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-3 bg-white rounded-lg border space-y-2">
+                    <label class="text-sm font-semibold text-gray-500">Colaborador 1:</label>
+                    <p id="plan_p4_p1_nombre" class="text-lg font-bold text-gray-800"></p>
+                    <label class="text-sm font-semibold text-gray-500">Frecuencia Acordada (Ej. 4):</label>
+                    <p id="plan_p4_p1_frecuencia" class="text-lg font-bold text-gray-800"></p>
+                </div>
+                <div class="p-3 bg-white rounded-lg border space-y-2">
+                    <label class="text-sm font-semibold text-gray-500">Colaborador 2:</label>
+                    <p id="plan_p4_p2_nombre" class="text-lg font-bold text-gray-800"></p>
+                    <label class="text-sm font-semibold text-gray-500">Frecuencia Acordada (Ej. 4):</label>
+                    <p id="plan_p4_p2_frecuencia" class="text-lg font-bold text-gray-800"></p>
+                </div>
+            </div>
+            <div class="mt-4 p-3 bg-white rounded-lg border">
+                <label class="text-sm font-semibold text-gray-500">1ra Fecha Próxima Sesión (Ej. 6, Acción 1):</label>
+                <p id="plan_p4_proxima_sesion" class="text-lg font-bold text-gray-800"></p>
+            </div>
+        </div>
+        
+        <div class="p-6 bg-red-50 rounded-lg border-l-4 border-red-500">
+            <h3 class="text-xl font-bold text-red-800">Análisis de Obstáculos</h3>
             <div class="mt-4"><label class="block font-semibold">Posible Obstáculo:</label><textarea class="autosave-input w-full mt-1 p-2 border rounded" placeholder="Ej: Falta de tiempo, resistencia del colaborador..." data-section="plan" data-id="plan_obstaculo"></textarea></div>
             <div class="mt-4"><label class="block font-semibold">Cómo lo Superaré:</label><textarea class="autosave-input w-full mt-1 p-2 border rounded" placeholder="Ej: Bloquear mi agenda por 2 horas..." data-section="plan" data-id="plan_estrategia"></textarea></div>
         </div>
     </div>`;
-// --- FIN MODIFICACIÓN 3 ---
+
+// --- FIN MODIFICACIÓN 1 ---
 
     // --- LÓGICA DE NAVEGACIÓN Y ESTADO ---
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.section-content');
+
+// --- INICIO MODIFICACIÓN 3: Disparar en showSection ---
+// UBICACIÓN: Función showSection(hash)
 
     function showSection(hash) {
         sections.forEach(section => {
@@ -280,18 +395,12 @@ document.getElementById('plan').innerHTML = `
             link.classList.toggle('active', link.getAttribute('href') === hash);
         });
         
-// DEBES ELIMINAR O COMENTAR LAS SIGUIENTES 5 LÍNEAS:
-        if (hash === '#resumen') {
-            populateExecutiveSummary();
-        }
-        if (hash === '#reporte') { // <-- AÑADIR ESTO
-            populateFinalReport();
-        }
+        // AÑADE ESTE BLOQUE 'if':
         if (hash === '#plan') {
-            updatePlanTitles();
+            populatePlanDeImplementacion();
         }
     }
-// --- FIN MODIFICACIÓN 4 ---
+// --- FIN MODIFICACIÓN 3 ---
 
     navMenu.addEventListener('click', function(e) {
         const link = e.target.closest('.nav-link');
@@ -305,8 +414,8 @@ document.getElementById('plan').innerHTML = `
     });
 
     // --- LÓGICA DE COMPLETITUD Y PROGRESO ---
-// --- INICIO MODIFICACIÓN 5: Corregir barra de progreso ---
-// UBICACIÓN: Función checkCompletion()
+    // --- INICIO MODIFICACIÓN 5: Corregir barra de progreso ---
+    // UBICACIÓN: Función checkCompletion()
 
     function checkCompletion() {
         let completedSections = 0;
@@ -339,7 +448,7 @@ document.getElementById('plan').innerHTML = `
 const progress = (completedSections / sectionsData.length) * 100; // <-- LÍNEA NUEVA
         document.getElementById('progress-bar').style.width = `${progress}%`;
     }
-// --- FIN MODIFICACIÓN 5 ---
+    // --- FIN MODIFICACIÓN 5 ---
 
     // --- AUTOSAVE ---
     function loadSavedData() {
@@ -358,6 +467,8 @@ const progress = (completedSections / sectionsData.length) * 100; // <-- LÍNEA 
         });
         updateDelegacionTotals();
         checkCompletion();
+        // AÑADE ESTA LÍNEA:
+        populatePlanDeImplementacion();
     }
 
     mainContent.addEventListener('input', function(e) {
@@ -369,6 +480,12 @@ const progress = (completedSections / sectionsData.length) * 100; // <-- LÍNEA 
                 updateDelegacionTotals();
             }
             checkCompletion();
+
+            // AÑADE ESTE BLOQUE DE CÓDIGO en ambos listeners:
+            const section = input.dataset.section;
+            if (['vocacion', 'prioridades', 'mision', 'feedback'].includes(section)) {
+                populatePlanDeImplementacion();
+            }
             }
     });
         mainContent.addEventListener('change', function(e) {
@@ -380,6 +497,13 @@ const progress = (completedSections / sectionsData.length) * 100; // <-- LÍNEA 
                 updateDelegacionTotals();
             }
             checkCompletion();
+
+            // AÑADE ESTE BLOQUE DE CÓDIGO en ambos listeners:
+            const section = input.dataset.section;
+            if (['vocacion', 'prioridades', 'mision', 'feedback'].includes(section)) {
+                populatePlanDeImplementacion();
+            }
+
             }
     });
 
@@ -548,6 +672,78 @@ for (let i = 1; i <= 2; i++) {
             <td class="p-2"><textarea class="autosave-input w-full p-2 border rounded" data-section="roleplay" data-id="roleplay_a${index}_mejoras" placeholder="Oportunidades de mejora..."></textarea></td>`;
         if (roleplayTableBody) roleplayTableBody.appendChild(row);
     });
+
+    // --- INICIO MODIFICACIÓN 2: Nueva función para poblar "Mi Plan de Implementación" ---
+// UBICACIÓN: Añadir esta función antes de la lógica de "EXPORTAR A PDF"
+
+    function populatePlanDeImplementacion() {
+        const defaultText = 'No definido';
+
+        // --- Función de ayuda para obtener datos ---
+        function getStorage(id, defaultVal = defaultText) {
+            const val = localStorage.getItem('cuaderno_' + id);
+            return val ? val : defaultVal;
+        }
+
+        // --- Función de ayuda para obtener radios ---
+        function getRadio(name, defaultVal = defaultText) {
+            const val = localStorage.getItem('cuaderno_' + name);
+            return val ? val : defaultVal;
+        }
+
+        // --- Función de ayuda para poblar un elemento ---
+        function setContent(id, content) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.textContent = content;
+            }
+        }
+
+        // --- PASO 1: Grupo Piloto ---
+        setContent('plan_p1_nombre', getStorage('vocacion_p1_titulo'));
+        setContent('plan_p2_nombre', getStorage('vocacion_p2_titulo'));
+
+        // --- PASO 2: Redefinir Rol (Puesto 1) ---
+        setContent('plan_p2_p1_nombre', getStorage('vocacion_p1_titulo'));
+        setContent('plan_p1_resp', getStorage('mision_p1_responsabilidades'));
+        setContent('plan_p1_mision', getStorage('mision_p1_mision_rol'));
+        setContent('plan_p1_prior', getStorage('mision_p1_prioridades_exito'));
+        setContent('plan_p1_plazo', getRadio('mision_p1_plazo_revision'));
+        setContent('plan_p1_func', getStorage('vocacion_p1_funciones'));
+        setContent('plan_p1_enfoque', getStorage('vocacion_p1_enfoque'));
+        setContent('plan_p1_comp', getStorage('prioridades_c1_comportamiento'));
+        setContent('plan_p1_res', getStorage('prioridades_c1_resultado'));
+        setContent('plan_p1_owner', getStorage('prioridades_c1_ownership'));
+        
+        // --- PASO 2: Redefinir Rol (Puesto 2) ---
+        setContent('plan_p2_p2_nombre', getStorage('vocacion_p2_titulo'));
+        setContent('plan_p2_resp', getStorage('mision_p2_responsabilidades'));
+        setContent('plan_p2_mision', getStorage('mision_p2_mision_rol'));
+        setContent('plan_p2_prior', getStorage('mision_p2_prioridades_exito'));
+        setContent('plan_p2_plazo', getRadio('mision_p2_plazo_revision'));
+        setContent('plan_p2_func', getStorage('vocacion_p2_funciones'));
+        setContent('plan_p2_enfoque', getStorage('vocacion_p2_enfoque'));
+        setContent('plan_p2_comp', getStorage('prioridades_c2_comportamiento'));
+        setContent('plan_p2_res', getStorage('prioridades_c2_resultado'));
+        setContent('plan_p2_owner', getStorage('prioridades_c2_ownership'));
+
+        // --- PASO 2: Reflexión Compartida ---
+        setContent('plan_s3_reflexion', getStorage('prioridades_reflexion'));
+
+        // --- PASO 3: Sesión Alineación ---
+        setContent('plan_p3_p1_nombre', getStorage('vocacion_p1_titulo'));
+        setContent('plan_p3_p2_nombre', getStorage('vocacion_p2_titulo'));
+        setContent('plan_p3_fecha_retro', getStorage('feedback_fecha'));
+
+        // --- PASO 4: Sesión Feedback ---
+        setContent('plan_p4_p1_nombre', getStorage('vocacion_p1_titulo'));
+        setContent('plan_p4_p2_nombre', getStorage('vocacion_p2_titulo'));
+        setContent('plan_p4_p1_frecuencia', getRadio('mision_p1_plazo_revision'));
+        setContent('plan_p4_p2_frecuencia', getRadio('mision_p2_plazo_revision'));
+        setContent('plan_p4_proxima_sesion', getStorage('feedback_accion1_proxima_sesion'));
+    }
+
+// --- FIN MODIFICACIÓN 2 ---
 
 // --- EXPORTAR A PDF ---
 // 2. REEMPLÁZALO con este bloque de 'IndexOBSOLETO.html':
